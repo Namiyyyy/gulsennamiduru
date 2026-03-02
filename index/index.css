@@ -160,7 +160,7 @@ main {
     overflow-y: auto;
 }
 
-/* Popup modal in top left corner */
+/* Popup modal on the right (same as about/contact) */
 #popup-modal.active {
     display: block;
     background: transparent;
@@ -169,48 +169,73 @@ main {
 #popup-modal .modal-content {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
+    left: auto;
     z-index: 1001;
     background: white;
+    width: 60%;
+    min-width: 360px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 #popup-modal.large-modal .modal-content {
-    width: 50%;
-    min-width: 400px;
+    width: 60%;
+    min-width: 360px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-.popup-header {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.popup-header h2 {
-    font-size: 8px;
-    font-weight: normal;
+#popup-modal .detail-header h2 {
     color: black;
+    font-weight: bold;
+    font-size: 32px; /* 4x */
 }
 
-.medium-tag {
-    font-size: 8px;
+/* Popup: title / medium, year / short description */
+.popup-header-rows {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1em;
+}
+
+/* Medium, year (single line, comma-separated) */
+.popup-medium-year {
+    font-size: 16px; /* same as short description */
     color: #666;
+    font-weight: normal;
+    font-style: normal;
     text-transform: lowercase;
-    font-style: italic;
 }
 
-.popup-actions {
+/* Extra spacing only after short description */
+.popup-short-description {
+    margin-bottom: 0.5em;
+}
+
+.detail-header-row {
     display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+
+/* Short description (italic) - 2x */
+.popup-short-description {
+    color: #333;
+    font-style: italic;
+    font-size: 16px; /* 2x */
 }
 
 .action-link {
     color: black;
     text-decoration: none;
-    font-size: 8px;
+    font-size: 16px;
+    font-weight: bold;
     white-space: nowrap;
+    margin: 0;
 }
 
 .action-link:hover {
@@ -222,19 +247,42 @@ main {
     margin-bottom: 30px;
 }
 
+/* Video section (separate from images) */
+.video-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    margin-bottom: 20px;
+}
+
+.video-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.popup-video {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    display: block;
+    background: #000;
+}
+
 .slideshow-container {
     position: relative;
     width: 100%;
     margin-bottom: 15px;
     overflow: hidden;
-    max-height: 66.66vh;
+    max-height: 50vh;
 }
 
 .slideshow-container img,
 .slideshow-container video {
     width: 100%;
     height: auto;
-    max-height: 66.66vh;
+    max-height: 50vh;
     object-fit: contain;
     display: block;
     cursor: ew-resize;
@@ -298,14 +346,166 @@ main {
     font-size: 11px;
 }
 
-.popup-description {
-    font-size: 8px;
-    line-height: 1.8;
+/* PDF book viewer: spread view, left | spine | right, arrows + keyboard */
+.book-view {
+    display: none;
+    margin-bottom: 20px;
+    min-height: 200px;
 }
 
-.popup-description p {
+.book-view .book-spread {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0;
+    max-width: 100%;
+    margin-bottom: 15px;
+    background: transparent; /* no background between pages */
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none; /* remove inner border so pages visually touch */
+}
+
+/* Left page (reader’s left), right page (reader’s right) */
+.book-view .book-page-left {
+    order: 1;
+    flex: 1;
+    min-width: 0;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #fff;
+    overflow: hidden;
+}
+
+.book-view .book-page-right {
+    order: 3;
+    flex: 1;
+    min-width: 0;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    overflow: hidden;
+}
+
+.book-view .book-page {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.book-view .book-page img {
+    width: 100%;
+    height: auto;
+    max-height: 66vh;
+    object-fit: contain;
+    display: block;
+}
+
+.book-view .book-spine {
+    order: 2;
+    width: 0; /* pages visually touch at the inner (tall) edges */
+    flex-shrink: 0;
+    background: transparent;
+}
+
+.book-view .book-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-view .book-controls .slide-btn {
+    min-width: 60px;
+    font-size: 6px; /* small: Next / Previous under book view */
+}
+
+.book-view .book-loading {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.book-view .book-loading a {
+    color: #c00;
+    text-decoration: underline;
+}
+
+/* Shared modal body and text (popup + detail modals) */
+.modal-body {
+    margin-bottom: 0;
+    overflow-y: auto;
+}
+
+/* Text space in project popup (below slideshow/book) */
+.popup-text {
+    margin-top: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px; /* match medium, year, short description */
+    line-height: 1.6;
+    color: #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 0;
+}
+
+.popup-text p {
+    margin: 0 0 1em 0;
+}
+
+.popup-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Credentials (centered, at the end of page) */
+.popup-credentials {
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 16px; /* match medium, year, short description */
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    font-weight: normal;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 0;
+}
+
+/* All modals: scrollable content */
+.modal-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal .cv-content {
+    max-height: none;
+    overflow-y: visible;
+}
+
+.modal-text,
+.cv-content {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.modal-text p,
+.cv-content p {
     margin-bottom: 10px;
-    font-size: 8px;
+    font-size: 16px;
 }
 
 /* Detail View */
@@ -358,13 +558,13 @@ body.detail-page .container {
 
 .detail-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     padding: 40px;
     padding-bottom: 0;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.5em;
 }
 
 .detail-header > div {
@@ -373,12 +573,26 @@ body.detail-page .container {
     gap: 8px;
     flex: 1;
     min-width: 200px;
+    text-align: center;
 }
 
 .detail-header h2 {
-    font-size: 8px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: bold;
     color: red;
+    text-align: center;
+    margin: 0;
+}
+
+/* Keep about/close and all modal titles at 16px */
+#cv-view .detail-header h2,
+#contact-view .detail-header h2,
+#cv-page-view .detail-header h2,
+#photography-view .detail-header h2,
+#video-view .detail-header h2,
+#sculpture-view .detail-header h2,
+.detail-modal .action-link {
+    font-size: 16px;
 }
 
 .detail-images {
@@ -401,24 +615,19 @@ body.detail-page .container {
 }
 
 .detail-description {
-    font-size: 8px;
+    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .detail-description p {
     margin-bottom: 20px;
-    font-size: 8px;
-}
-
-/* CV Content */
-.cv-content {
     font-size: 16px;
-    line-height: 1.8;
 }
 
+/* CV / modal content (links, headings) */
 .cv-content p {
-    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -483,38 +692,21 @@ body.detail-page .container {
     }
 
     #popup-modal .modal-content {
-        width: 50%;
+        width: 60%;
         min-width: 280px;
         padding: 30px 20px;
-        max-height: 95vh;
+        max-height: 90vh;
+        overflow-y: auto;
         position: fixed;
         top: 15px;
-        left: 15px;
+        right: 15px;
+        left: auto;
         z-index: 1001;
     }
-    
+
     #popup-modal.large-modal .modal-content {
-        width: 95%;
+        width: 60%;
         min-width: 280px;
-    }
-
-    .popup-header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .popup-header h2 {
-        font-size: 24px;
-        min-width: auto;
-    }
-
-    .popup-actions {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    .popup-description {
-        font-size: 18px;
     }
 
     .action-link {

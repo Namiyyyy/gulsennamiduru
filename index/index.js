@@ -3,8 +3,8 @@ const portfolioData = {
     title: "Gülsen Namıduru",
     projects: [
         {
-            id: 5,
-            title: "05 - Sylwester Stalker",
+            id: 7,
+            title: "06 - Voices of Leopoldplatz",
             year: "2024",
             category: "video",
             medium: "video",
@@ -14,13 +14,100 @@ const portfolioData = {
             // ========== PROJECT DESCRIPTION END ==========
             images: [],
             videos: [
-                // Add your video file path here, e.g.:
-                // "videos/sylwester_stalker.mp4"
-            ]
+                "video/voices_of_leopoldplatz/Bebe_sobe.mp4"
+            ],
+            pdf: '',
+            credentials: ''
+        },
+        {
+            id: 6,
+            title: "05 - Pirate Pedagogies",
+            year: "2024",
+            category: "art in public space",
+            medium: "art in public space",
+            // ========== PROJECT DESCRIPTION START ==========
+            shortDescription: "an educational program focusing on the relationship between urban aesthetic, sensory experience and our mental landscape",
+            fullDescription: "an educational program focusing on the relationship between urban aesthetic, sensory experience and our mental landscape",
+            // ========== PROJECT DESCRIPTION END ==========
+            images: [],
+            videos: [],
+            pdf: "img/pirate_pedagogies/ebesobe_zine.pdf",
+            pdfImages: [
+                "img/pirate_pedagogies/zine-07.jpg",
+                "img/pirate_pedagogies/zine-08.jpg",
+                "img/pirate_pedagogies/zine-09.jpg",
+                "img/pirate_pedagogies/zine-10.jpg",
+                "img/pirate_pedagogies/zine-11.jpg",
+                "img/pirate_pedagogies/zine-12.jpg",
+                "img/pirate_pedagogies/zine-13.jpg",
+                "img/pirate_pedagogies/zine-14.jpg",
+                "img/pirate_pedagogies/zine-15.jpg",
+                "img/pirate_pedagogies/zine-16.jpg",
+                "img/pirate_pedagogies/zine-17.jpg",
+                "img/pirate_pedagogies/zine-18.jpg",
+                "img/pirate_pedagogies/zine-19.jpg",
+                "img/pirate_pedagogies/zine-20.jpg",
+                "img/pirate_pedagogies/zine-21.jpg",
+                "img/pirate_pedagogies/zine-27.jpg"
+            ],
+            credentials: ''
+        },
+        {
+            id: 5,
+            title: "04 - Sylwester Stalker",
+            year: "2024",
+            category: "video",
+            medium: "video",
+            // ========== PROJECT DESCRIPTION START ==========
+            shortDescription: "Content coming soon...",
+            fullDescription: "Content coming soon...",
+            // ========== PROJECT DESCRIPTION END ==========
+            images: [],
+            videos: [
+                "video/sylwester_stalker/FIREWORK MADNESS & CHAOS.mp4"
+            ],
+            credentials: ''
+        },
+        {
+            id: 1,
+            title: "03 - Architectures Of Sky",
+            year: "2024",
+            category: "photography",
+            medium: "photography",
+            // ========== PROJECT DESCRIPTION START ==========
+            shortDescription: "a photography series aiming to create an index for objects furnishing sky",
+            fullDescription: "A photography project focuses on the industrial elements, searching for micro fragments within their imposing presence, details that, when isolated, reveal an unexpected aesthetic resonance. In their intersections and overlaps, a visual language emerges, reminiscre formal compositions, the project attempts to undo the numb efficiency imposed on their aesthetics. In doing so, it reclaims a sense of affect and engagement within an industrial language built for optimization rather than expression.\n\nThe photographic subjects I choose oscillate between hyper- and trans-local in their character. They are mostly bi-products of mass production, in constant circulation, migrating from one place to another, they are nearly context-less. To enhance this effect, I isolate the objects from their surroundings with a process of zooming and framing. Since scale is a relational property of an object, isolation helps me to manipulate the reality that object impose on the viewer. While opening a door to abstraction, it helps me to rewrite the narrative of these objects for a reserach on their affective qualities.",
+            // ========== PROJECT DESCRIPTION END ==========
+            images: [
+                "img/architecture_of_sky/architecture_of_sky.jpg",
+                "img/architecture_of_sky/architectures_of_sky_2.jpg",
+                "img/architecture_of_sky/architectures_of_sky_3.jpg",
+                "img/architecture_of_sky/_DSC5409.jpg"
+            ],
+            credentials: ''
+        },
+        {
+            id: 2,
+            title: "02 - Abandoned Battleground",
+            year: "2023",
+            category: "photography",
+            medium: "photography",
+            // ========== PROJECT DESCRIPTION START ==========
+            shortDescription: "a photographical research on rubbish, and urban exclusion",
+            fullDescription: "The foundation of my project lies in the photographs I capture during walks in gentrified areas or areas in the danger of being gentrified such as Wedding, Moabit, Pankow, Neukölln, and Kreuzberg.\n\nBerlin is renowned for its positive qualities as well as its reputation for being dirty. Rather than merely perceiving this as a failure of the city, the concept of \"rubbish\" and its correspondent in state agenda, waste management, emerges as a form of urban exclusion. To highlight this exclusion, I adopt an archaeological approach to rubbish within the urban periphery. I focus on groups of objects that are out-of-use, discarded, and abandoned in the city.",
+            // ========== PROJECT DESCRIPTION END ==========
+            images: [
+                "img/abandoned_battleground/1.jpg",
+                "img/abandoned_battleground/2.jpg",
+                "img/abandoned_battleground/5.jpg",
+                "img/abandoned_battleground/6.jpg",
+                "img/abandoned_battleground/1705851079910.jpg"
+            ],
+            credentials: ''
         },
         {
             id: 3,
-            title: "03 - hieroglyphs",
+            title: "01 - hieroglyphs",
             year: "2022",
             category: "drawing",
             medium: "drawing",
@@ -31,40 +118,8 @@ const portfolioData = {
             images: [
                 "img/hiyeroglifler/daire çalışma.jpg",
                 "img/hiyeroglifler/üçgen çalışması.jpg"
-            ]
-        },
-        {
-            id: 2,
-            title: "02 - Abandoned Battle Ground",
-            year: "2023",
-            category: "photography",
-            medium: "photography",
-            // ========== PROJECT DESCRIPTION START ==========
-            shortDescription: "a photographical research on rubbish, and urban exclusion",
-            fullDescription: "The foundation of my project lies in the photographs I capture during walks in gentrified areas or areas in the danger of being gentrified such as Wedding, Moabit, Pankow, Neukölln, and Kreuzberg.\n\nBerlin is renowned for its positive qualities as well as its reputation for being dirty. Rather than merely perceiving this as a failure of the city, the concept of \"rubbish\" and its correspondent in state agenda, waste management, emerges as a form of urban exclusion. To highlight this exclusion, I adopt an archaeological approach to rubbish within the urban periphery. I focus on groups of objects that are out-of-use, discarded, and abandoned in the city.",
-            // ========== PROJECT DESCRIPTION END ==========
-            images: [
-                "img/abandoned_battleground/abandoned_battle_ground_1.jpg",
-                "img/abandoned_battleground/abandoned_battle_ground_2.jpg",
-                "img/abandoned_battleground/abandoned_battle_ground_3.jpg"
-            ]
-        },
-        {
-            id: 1,
-            title: "01 - Architectures Of Sky",
-            year: "2024",
-            category: "photography",
-            medium: "photography",
-            // ========== PROJECT DESCRIPTION START ==========
-            shortDescription: "a photography series aiming to create an index for objects furnishing sky",
-            fullDescription: "A photography project focuses on the industrial elements, searching for micro fragments within their imposing presence, details that, when isolated, reveal an unexpected aesthetic resonance. In their intersections and overlaps, a visual language emerges, reminiscre formal compositions, the project attempts to undo the numb efficiency imposed on their aesthetics. In doing so, it reclaims a sense of affect and engagement within an industrial language built for optimization rather than expression.",
-            // ========== PROJECT DESCRIPTION END ==========
-            images: [
-                "img/architecture_of_sky/architecture_of_sky.jpg",
-                "img/architecture_of_sky/architectures_of_sky_2.jpg",
-                "img/architecture_of_sky/architectures_of_sky_3.jpg",
-                "img/architecture_of_sky/_DSC5409.jpg"
-            ]
+            ],
+            credentials: ''
         }
     ]
 };
@@ -79,13 +134,15 @@ const portfolioIndex = document.getElementById('portfolio-index');
 const popupModal = document.getElementById('popup-modal');
 const detailView = document.getElementById('detail-view');
 const popupTitle = document.getElementById('popup-title');
-const popupMedium = document.getElementById('popup-medium');
+const popupMediumYear = document.getElementById('popup-medium-year');
 const popupShortDescription = document.getElementById('popup-short-description');
+const popupFullDescription = document.getElementById('popup-full-description');
+const popupCredentials = document.getElementById('popup-credentials');
+const videoSection = document.getElementById('video-section');
 const slideshowContainer = document.getElementById('slideshow-container');
 const slideCounter = document.getElementById('slide-counter');
 const prevSlideBtn = document.getElementById('prev-slide');
 const nextSlideBtn = document.getElementById('next-slide');
-const moreLink = document.getElementById('more-link');
 const closePopupBtn = document.getElementById('close-popup');
 const detailTitle = document.getElementById('detail-title');
 const detailImages = document.getElementById('detail-images');
@@ -114,6 +171,25 @@ const sculptureLink = document.getElementById('sculpture-link');
 const sculptureView = document.getElementById('sculpture-view');
 const sculptureContent = document.getElementById('sculpture-content');
 const closeSculptureBtn = document.getElementById('close-sculpture');
+const imageSlideshowEl = document.getElementById('image-slideshow');
+const bookViewEl = document.getElementById('book-view');
+const bookPageLeftImg = document.querySelector('#book-view .book-page-left img');
+const bookPageRightImg = document.querySelector('#book-view .book-page-right img');
+const bookPrevBtn = document.getElementById('book-prev');
+const bookNextBtn = document.getElementById('book-next');
+const bookSpreadCounter = document.getElementById('book-spread-counter');
+const bookLoadingEl = document.getElementById('book-loading');
+
+// Book viewer state
+let pdfPageImages = [];
+let spreads = [];
+let currentSpreadIndex = 0;
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
 
 // Initialize portfolio index
 function initializeIndex() {
@@ -128,36 +204,116 @@ function initializeIndex() {
     });
 }
 
+// Helper function to remove item numbers from title (e.g. "01 - Title" -> "Title")
+function removeTitleNumbers(title) {
+    return title.replace(/^\d+\s*-\s*/, '');
+}
+
 // Open popup modal
 function openPopup(project) {
     currentProject = project;
     currentSlideIndex = 0;
 
-    // Set popup content
-    popupTitle.textContent = `${project.title} (${project.year})`;
-    if (project.medium) {
-        popupMedium.textContent = project.medium;
-        popupMedium.style.display = 'inline';
-    } else {
-        popupMedium.style.display = 'none';
+    // Set popup content - remove numbers from title
+    const titleWithoutNumbers = removeTitleNumbers(project.title);
+    popupTitle.textContent = titleWithoutNumbers;
+    
+    // Medium, year (same line, comma between them)
+    if (popupMediumYear) {
+        const parts = [];
+        if (project.medium) parts.push(project.medium);
+        if (project.year) parts.push(project.year);
+        popupMediumYear.textContent = parts.join(', ');
+        popupMediumYear.style.display = parts.length ? 'block' : 'none';
     }
-    popupShortDescription.textContent = project.shortDescription;
+    
+    // Short description (italic)
+    if (popupShortDescription) {
+        popupShortDescription.textContent = project.shortDescription || '';
+        popupShortDescription.style.display = project.shortDescription ? 'block' : 'none';
+    }
 
-    // Combine images and videos into a media array
-    const mediaItems = [];
+    // Text space: full description below media
+    if (popupFullDescription) {
+        const full = project.fullDescription || '';
+        if (full.trim()) {
+            const paragraphs = full.split(/\n\n+/).filter(Boolean);
+            popupFullDescription.innerHTML = paragraphs.map(p => '<p>' + escapeHtml(p) + '</p>').join('');
+            popupFullDescription.style.display = 'block';
+        } else {
+            popupFullDescription.innerHTML = '';
+            popupFullDescription.style.display = 'none';
+        }
+    }
+    
+    // Credentials (centered, below detailed description)
+    if (popupCredentials) {
+        const credentials = project.credentials || '';
+        if (credentials.trim()) {
+            popupCredentials.textContent = credentials;
+            popupCredentials.style.display = 'block';
+        } else {
+            popupCredentials.textContent = '';
+            popupCredentials.style.display = 'none';
+        }
+    }
+    
+    // Clear video section
+    if (videoSection) {
+        videoSection.innerHTML = '';
+        videoSection.style.display = 'none';
+    }
+
+    // Book viewer: PDF or JPEG images (e.g. PDF exported as one JPEG per page)
+    const usePdfImages = project.pdfImages && Array.isArray(project.pdfImages) && project.pdfImages.length > 0;
+    const usePdf = project.pdf && project.pdf.trim() !== '';
+
+    if (usePdfImages) {
+        imageSlideshowEl.style.display = 'none';
+        bookViewEl.style.display = 'block';
+        bookLoadingEl.style.display = 'none';
+        bookViewEl.querySelector('.book-spread').style.display = 'flex';
+        bookViewEl.querySelector('.book-controls').style.display = 'flex';
+        showBookFromImages(project.pdfImages);
+        popupModal.classList.add('active');
+        if (project.title.startsWith('01') || project.title.startsWith('02') ||
+            project.title.startsWith('03') || project.title.startsWith('04') ||
+            project.title.startsWith('05') || project.title.startsWith('06') ||
+            project.title.startsWith('07')) {
+            popupModal.classList.add('large-modal');
+        } else {
+            popupModal.classList.remove('large-modal');
+        }
+        document.body.style.overflow = 'hidden';
+        return;
+    }
+
+    if (usePdf) {
+        imageSlideshowEl.style.display = 'none';
+        bookViewEl.style.display = 'block';
+        bookLoadingEl.style.display = 'block';
+        bookViewEl.querySelector('.book-spread').style.display = 'none';
+        bookViewEl.querySelector('.book-controls').style.display = 'none';
+        loadPdfAndShowBook(project.pdf);
+        popupModal.classList.add('active');
+        // Check original title with numbers for large modal
+        if (project.title.startsWith('01') || project.title.startsWith('02') ||
+            project.title.startsWith('03') || project.title.startsWith('04') ||
+            project.title.startsWith('05') || project.title.startsWith('06') ||
+        project.title.startsWith('07')) {
+            popupModal.classList.add('large-modal');
+        } else {
+            popupModal.classList.remove('large-modal');
+        }
+        document.body.style.overflow = 'hidden';
+        return;
+    }
+
+    bookViewEl.style.display = 'none';
+    
+    // Handle images separately (in slideshow)
     if (project.images && project.images.length > 0) {
-        project.images.forEach(imgPath => {
-            mediaItems.push({ type: 'image', src: imgPath });
-        });
-    }
-    if (project.videos && project.videos.length > 0) {
-        project.videos.forEach(videoPath => {
-            mediaItems.push({ type: 'video', src: videoPath });
-        });
-    }
-
-    // Handle media (images and videos)
-    if (mediaItems.length > 0) {
+        imageSlideshowEl.style.display = 'block';
         // Clear any existing timer
         if (slideshowTimer) {
             clearInterval(slideshowTimer);
@@ -165,23 +321,12 @@ function openPopup(project) {
         }
         
         slideshowContainer.innerHTML = '';
-        mediaItems.forEach((mediaItem, index) => {
-            let element;
-            if (mediaItem.type === 'video') {
-                element = document.createElement('video');
-                element.src = mediaItem.src;
-                element.controls = true;
-                element.classList.add('slide-video');
-            } else {
-                element = document.createElement('img');
-                element.src = mediaItem.src;
-                element.alt = project.title;
-                element.classList.add('slide-image');
-            }
-            
-            element.classList.add('slide-media');
+        project.images.forEach((imgPath, index) => {
+            const element = document.createElement('img');
+            element.src = imgPath;
+            element.alt = titleWithoutNumbers;
+            element.classList.add('slide-image', 'slide-media');
             if (index === 0) {
-                // First media is visible and sets container height
                 element.style.position = 'relative';
             } else {
                 element.classList.add('hidden');
@@ -192,47 +337,165 @@ function openPopup(project) {
                 if (index !== currentSlideIndex) {
                     showSlide(index);
                 } else {
-                    // If clicking current media, go to next
                     nextSlide();
                 }
             });
             
-            // Add right-click handler to advance to next slide (only for images)
-            if (mediaItem.type === 'image') {
-                element.addEventListener('contextmenu', (e) => {
-                    e.preventDefault(); // Prevent default context menu
-                    nextSlide();
-                });
-            }
+            // Add right-click handler to advance to next slide
+            element.addEventListener('contextmenu', (e) => {
+                e.preventDefault(); // Prevent default context menu
+                nextSlide();
+            });
             
             slideshowContainer.appendChild(element);
         });
         currentSlideIndex = 0;
         updateSlideCounter();
         updateSlideButtons();
-        document.querySelector('.image-slideshow').style.display = 'block';
     } else {
-        slideshowContainer.innerHTML = '<p style="font-size: 14px; color: #666;">No media available</p>';
-        document.querySelector('.image-slideshow').style.display = 'none';
+        imageSlideshowEl.style.display = 'none';
     }
-
-    // Show/hide More link based on whether full description exists
-    if (project.fullDescription && project.fullDescription !== "Content coming soon...") {
-        moreLink.style.display = 'inline';
-    } else {
-        moreLink.style.display = 'none';
+    
+    // Handle videos separately (after images)
+    if (project.videos && project.videos.length > 0 && videoSection) {
+        videoSection.innerHTML = '';
+        videoSection.style.display = 'block';
+        project.videos.forEach((videoPath) => {
+            const videoWrapper = document.createElement('div');
+            videoWrapper.className = 'video-wrapper';
+            const element = document.createElement('video');
+            try {
+                element.src = new URL(videoPath, window.location.href).href;
+            } catch (_) {
+                element.src = videoPath;
+            }
+            element.controls = true;
+            element.playsInline = true;
+            element.preload = 'auto';
+            element.classList.add('popup-video');
+            element.addEventListener('error', function() {
+                const msg = document.createElement('p');
+                msg.className = 'video-error-msg';
+                msg.style.cssText = 'padding:20px;color:#666;font-size:14px;';
+                msg.textContent = 'This video cannot be played in your browser. Try converting the file to MP4 (H.264) for better support.';
+                videoWrapper.appendChild(msg);
+            });
+            videoWrapper.appendChild(element);
+            videoSection.appendChild(videoWrapper);
+        });
     }
 
     // Show popup
     popupModal.classList.add('active');
-    // Add class for work items starting with "01-", "02-", "03-", or "04-" to use larger modal size
-    if (project.title.startsWith('01') || project.title.startsWith('02') || 
-        project.title.startsWith('03') || project.title.startsWith('04')) {
+    // Add class for work items starting with "01-", "02-", "03-", etc. to use larger modal size
+    // Check original title with numbers for large modal
+    if (project.title.startsWith('01') || project.title.startsWith('02') ||
+        project.title.startsWith('03') || project.title.startsWith('04') ||
+        project.title.startsWith('05') || project.title.startsWith('06') ||
+        project.title.startsWith('07')) {
         popupModal.classList.add('large-modal');
     } else {
         popupModal.classList.remove('large-modal');
     }
     document.body.style.overflow = 'hidden';
+}
+
+// --- PDF book viewer (spread view with arrows and orientation) ---
+if (typeof pdfjsLib !== 'undefined') {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+}
+
+function renderPageToDataUrl(page) {
+    const scale = 2;
+    const viewport = page.getViewport({ scale });
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+    return page.render({ canvasContext: ctx, viewport }).promise.then(() => canvas.toDataURL('image/jpeg', 0.85));
+}
+
+function showBookFromImages(imagePaths) {
+    pdfPageImages = [];
+    spreads = [];
+    currentSpreadIndex = 0;
+    if (!imagePaths || imagePaths.length === 0) return;
+
+    // First page alone (on the right); then spreads from page 2 onward
+    spreads.push([null, imagePaths[0] || null]);
+    for (let i = 1; i < imagePaths.length; i += 2) {
+        spreads.push([imagePaths[i] || null, imagePaths[i + 1] || null]);
+    }
+    showSpread(0);
+}
+
+function loadPdfAndShowBook(pdfUrl) {
+    pdfPageImages = [];
+    spreads = [];
+    currentSpreadIndex = 0;
+    const absolutePdfUrl = new URL(pdfUrl, window.location.href).href;
+    bookLoadingEl.textContent = 'Loading PDF…';
+    bookLoadingEl.style.display = 'block';
+
+    function loadDoc() {
+        return fetch(absolutePdfUrl)
+            .then(function(r) {
+                if (!r.ok) throw new Error('Fetch failed');
+                return r.arrayBuffer();
+            })
+            .then(function(buf) {
+                return pdfjsLib.getDocument({ data: buf }).promise;
+            })
+            .catch(function() {
+                return pdfjsLib.getDocument({ url: absolutePdfUrl }).promise;
+            });
+    }
+
+    loadDoc().then(function(pdf) {
+        const numPages = pdf.numPages;
+        const renderPromises = [];
+        for (let i = 1; i <= numPages; i++) {
+            renderPromises.push(pdf.getPage(i).then(renderPageToDataUrl));
+        }
+        return Promise.all(renderPromises);
+    }).then(function(imageUrls) {
+        pdfPageImages = imageUrls;
+        if (pdfPageImages.length > 0) {
+            // First page alone (on the right); then spreads from page 2 onward
+            spreads.push([null, pdfPageImages[0] || null]);
+            for (let i = 1; i < pdfPageImages.length; i += 2) {
+                spreads.push([pdfPageImages[i] || null, pdfPageImages[i + 1] || null]);
+            }
+        }
+        bookLoadingEl.style.display = 'none';
+        bookViewEl.querySelector('.book-spread').style.display = 'flex';
+        bookViewEl.querySelector('.book-controls').style.display = 'flex';
+        showSpread(0);
+    }).catch(function() {
+        bookLoadingEl.innerHTML = 'Could not load PDF. <a href="' + absolutePdfUrl + '" target="_blank" rel="noopener" style="color:#c00;text-decoration:underline;">Open in new tab</a>';
+        bookLoadingEl.style.display = 'block';
+    });
+}
+
+function showSpread(index) {
+    currentSpreadIndex = index;
+    const spread = spreads[index];
+    if (!spread) return;
+    bookPageLeftImg.src = spread[0] || '';
+    bookPageLeftImg.style.display = spread[0] ? 'block' : 'none';
+    bookPageRightImg.src = spread[1] || '';
+    bookPageRightImg.style.display = spread[1] ? 'block' : 'none';
+    bookSpreadCounter.textContent = spreads.length > 0 ? (index + 1) + ' / ' + spreads.length : '';
+    bookPrevBtn.disabled = index <= 0;
+    bookNextBtn.disabled = index >= spreads.length - 1;
+}
+
+function bookPrevSpread() {
+    if (currentSpreadIndex > 0) showSpread(currentSpreadIndex - 1);
+}
+
+function bookNextSpread() {
+    if (currentSpreadIndex < spreads.length - 1) showSpread(currentSpreadIndex + 1);
 }
 
 // Close popup modal
@@ -242,6 +505,8 @@ function closePopup() {
         clearInterval(slideshowTimer);
         slideshowTimer = null;
     }
+    bookViewEl.style.display = 'none';
+    imageSlideshowEl.style.display = 'block';
     popupModal.classList.remove('active');
     // Also close detail view if it's open
     if (detailView.classList.contains('active')) {
@@ -253,13 +518,6 @@ function closePopup() {
 }
 
 // Open detail view as separate page
-function openDetailView() {
-    if (!currentProject) return;
-    
-    // Navigate to detail page with project ID
-    window.location.href = `detail.html?id=${currentProject.id}`;
-}
-
 // Close detail view
 function closeDetailView() {
     detailView.classList.remove('active');
@@ -273,16 +531,14 @@ function updateSlideCounter() {
         return;
     }
     
-    // Count total media items (images + videos)
+    // Count only images (videos are separate)
     const imageCount = currentProject.images ? currentProject.images.length : 0;
-    const videoCount = currentProject.videos ? currentProject.videos.length : 0;
-    const totalMedia = imageCount + videoCount;
     
-    if (totalMedia === 0) {
+    if (imageCount === 0) {
         slideCounter.textContent = '';
         return;
     }
-    slideCounter.textContent = `${currentSlideIndex + 1} / ${totalMedia}`;
+    slideCounter.textContent = `${currentSlideIndex + 1} / ${imageCount}`;
 }
 
 function updateSlideButtons() {
@@ -292,12 +548,10 @@ function updateSlideButtons() {
         return;
     }
     
-    // Count total media items (images + videos)
+    // Count only images (videos are separate)
     const imageCount = currentProject.images ? currentProject.images.length : 0;
-    const videoCount = currentProject.videos ? currentProject.videos.length : 0;
-    const totalMedia = imageCount + videoCount;
     
-    if (totalMedia === 0) {
+    if (imageCount === 0) {
         prevSlideBtn.disabled = true;
         nextSlideBtn.disabled = true;
         return;
@@ -310,12 +564,10 @@ function updateSlideButtons() {
 function showSlide(index) {
     if (!currentProject) return;
     
-    // Count total media items
+    // Count only images (videos are separate)
     const imageCount = currentProject.images ? currentProject.images.length : 0;
-    const videoCount = currentProject.videos ? currentProject.videos.length : 0;
-    const totalMedia = imageCount + videoCount;
     
-    if (totalMedia === 0) return;
+    if (imageCount === 0) return;
     
     const slides = slideshowContainer.querySelectorAll('.slide-media');
     if (index < 0 || index >= slides.length) return;
@@ -347,36 +599,30 @@ function showSlide(index) {
 function nextSlide() {
     if (!currentProject) return;
     
-    // Count total media items
+    // Count only images (videos are separate)
     const imageCount = currentProject.images ? currentProject.images.length : 0;
-    const videoCount = currentProject.videos ? currentProject.videos.length : 0;
-    const totalMedia = imageCount + videoCount;
     
-    if (totalMedia === 0) return;
-    const nextIndex = (currentSlideIndex + 1) % totalMedia;
+    if (imageCount === 0) return;
+    const nextIndex = (currentSlideIndex + 1) % imageCount;
     showSlide(nextIndex);
 }
 
 function prevSlide() {
     if (!currentProject) return;
     
-    // Count total media items
+    // Count only images (videos are separate)
     const imageCount = currentProject.images ? currentProject.images.length : 0;
-    const videoCount = currentProject.videos ? currentProject.videos.length : 0;
-    const totalMedia = imageCount + videoCount;
     
-    if (totalMedia === 0) return;
-    const prevIndex = (currentSlideIndex - 1 + totalMedia) % totalMedia;
+    if (imageCount === 0) return;
+    const prevIndex = (currentSlideIndex - 1 + imageCount) % imageCount;
     showSlide(prevIndex);
 }
 
 // Event listeners
 prevSlideBtn.addEventListener('click', prevSlide);
 nextSlideBtn.addEventListener('click', nextSlide);
-moreLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    openDetailView();
-});
+if (bookPrevBtn) bookPrevBtn.addEventListener('click', bookPrevSpread);
+if (bookNextBtn) bookNextBtn.addEventListener('click', bookNextSpread);
 closePopupBtn.addEventListener('click', (e) => {
     e.preventDefault();
     closePopup();
@@ -391,6 +637,12 @@ document.addEventListener('keydown', (e) => {
     if (popupModal.classList.contains('active')) {
         if (e.key === 'Escape') {
             closePopup();
+        } else if (bookViewEl.style.display === 'block' && spreads.length > 0) {
+            if (e.key === 'ArrowLeft') {
+                bookPrevSpread();
+            } else if (e.key === 'ArrowRight') {
+                bookNextSpread();
+            }
         } else if (e.key === 'ArrowLeft') {
             prevSlide();
         } else if (e.key === 'ArrowRight') {
@@ -436,9 +688,9 @@ popupModal.addEventListener('click', (e) => {
 // Open CV view
 function openCvView() {
     cvContent.innerHTML = `
-        <p>As an architect, I find my inspiration in urban life, mostly at tresholds where the tension between realities the objects impose accentuates. While forming a direct connection between our affective landscape and urban form, I belive what we see is a way to undersrand ourselves, and the society. My artistic practice thus transforms walking into an essential act of world-making.</p>
+        <p>As an architect, I find my inspiration in urban life and understand myself through my surrounding. Thus built form, urban aethetics and its sensory qualities started to gain more and more emphasis in my practice.</p>
         
-        <p>The photographic subjects I choose oscillate between hyper- and trans-local in their character. They are mostly bi-products of mass production, in constant circulation, migrating from one place to another, they are nearly context-less. To enhance this effect, I isolate the objects from their surroundings with a process of zooming and framing. Since scale is a relational property of an object, isolation helps me to manipulate the reality that object impose on the viewer. While opening a door to abstraction, it helps me to rewrite the narrative of these objects for a reserach on their affective qualities.</p>
+        <p>In addition to that, I am a part of a collective. I also try to collectivize other areas of artistic work I tend to produce. This resulted with a shift in my focus from photography to video, from exhibition to participatory methods. Working with and building for people is the attitude I am trying to integrate into not only my artistic production but also to my life.</p>
     `;
     cvView.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -510,15 +762,16 @@ function openCvPageView() {
     cvPageContent.innerHTML = `
         <h3><strong>Education</strong></h3>
         <p><strong>BA, Architecture</strong><br>
-        Middle East Technical University (ODTÜ), Ankara, TR</p>
+        Middle East Technical University, Ankara, TR</p>
         
         <p><strong>MA, Social Sciences</strong><br>
         Humboldt University, Berlin. DE</p>
         
         <h3><strong>Grants/Residencies</strong></h3>
-        <p>AIR Leopoldplatz Artist Residency, Berlin</p>
-        <p>DAAD Scholarship, Berlin</p>
-        
+        <p>IN SITU 2025-2028 Art In Public Space Support Lab, 2026</p>
+        <p>AIR Leopoldplatz Artist Residency, Berlin, 2025</p>
+        <p>DAAD Scholarship, Berlin, 2023</p>
+
         <h3><strong>Exhibition</strong></h3>
         <p>Urban Silence, at 48H Neukölln, Berlin</p>
         <p>Paper BAAM, at POP Kudamm, Berlin</p>
@@ -704,15 +957,15 @@ videoView.addEventListener('click', (e) => {
 
 // Open Sculpture/Installation view
 function openSculptureView() {
-    const sculptureProjects = portfolioData.projects.filter(p => 
-        p.category.toLowerCase() === 'installation' || 
-        p.category.toLowerCase() === 'sculpture' ||
-        p.category.toLowerCase() === 'sculpture/installation'
-    );
+    const sculptureProjects = portfolioData.projects.filter(p => {
+        const m = (p.medium || '').toLowerCase();
+        const c = (p.category || '').toLowerCase();
+        return c === 'installation' || c === 'sculpture' || m === 'art in public space' || m === 'installation';
+    });
     
     let content = '';
     if (sculptureProjects.length === 0) {
-        content = '<p>No sculpture/installation projects available.</p>';
+        content = '<p>No art in public space projects available.</p>';
     } else {
         sculptureProjects.forEach((project) => {
             content += `<div style="margin-bottom: 30px; cursor: pointer;" onclick="openPopupFromCategory(${project.id})">
@@ -745,7 +998,7 @@ sculptureLink.addEventListener('click', (e) => {
     
     listItems.forEach((li) => {
         const medium = li.dataset.medium;
-        if (medium === 'installation') {
+        if (medium === 'installation' || medium === 'art in public space') {
             if (sculptureHighlighted) {
                 li.style.color = 'red';
             } else {

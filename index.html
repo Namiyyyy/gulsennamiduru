@@ -14,7 +14,7 @@
                 <span id="cv-link">about</span><span class="separator">.</span><span id="cv-page-link">cv</span><span class="separator">.</span><span id="contact-link">contact</span>
             </div>
             <div class="cv-link">
-                <span id="photography-link">photography</span><span class="separator">.</span><span id="video-link">video</span><span class="separator">.</span><span id="sculpture-link">sculpture/installation</span>
+                <span id="photography-link">photography</span><span class="separator">.</span><span id="video-link">video</span><span class="separator">.</span><span id="sculpture-link">art in public space</span>
             </div>
         </header>
 
@@ -26,36 +26,51 @@
             </div>
         </main>
 
-        <!-- Pop-up Modal -->
-        <div id="popup-modal" class="modal">
-            <div class="modal-content">
-                <div class="popup-header">
-                    <h2 id="popup-title"></h2>
-                    <span id="popup-medium" class="medium-tag"></span>
-                </div>
-                <div class="popup-actions">
-                    <a href="#" id="more-link" class="action-link">more</a>
-                    <a href="#" id="close-popup" class="action-link">close</a>
-                </div>
-                
-                <div class="image-slideshow">
-                    <div id="slideshow-container" class="slideshow-container">
-                        <!-- Images will be inserted here -->
+        <!-- Project popup (same structure as about/contact modals) -->
+        <div id="popup-modal" class="modal detail-modal">
+            <div class="modal-content detail-content">
+                <div class="detail-header popup-header-rows">
+                    <div class="detail-header-row">
+                        <h2 id="popup-title"></h2>
+                        <a href="#" id="close-popup" class="action-link" aria-label="Close">×</a>
                     </div>
-                    <div class="slideshow-controls">
-                        <button id="prev-slide" class="slide-btn">‹</button>
-                        <span id="slide-counter" class="slide-counter"></span>
-                        <button id="next-slide" class="slide-btn">›</button>
+                    <div class="detail-header-row">
+                        <span id="popup-medium-year" class="popup-medium-year"></span>
+                    </div>
+                    <div class="detail-header-row">
+                        <span id="popup-short-description" class="popup-short-description"></span>
                     </div>
                 </div>
-
-                <div class="popup-description">
-                    <p id="popup-short-description"></p>
+                <div class="modal-body">
+                    <div class="image-slideshow" id="image-slideshow">
+                        <div id="slideshow-container" class="slideshow-container"></div>
+                        <div class="slideshow-controls">
+                            <button id="prev-slide" class="slide-btn">‹</button>
+                            <span id="slide-counter" class="slide-counter"></span>
+                            <button id="next-slide" class="slide-btn">›</button>
+                        </div>
+                    </div>
+                    <div class="book-view" id="book-view">
+                        <div class="book-spread">
+                            <div class="book-page book-page-left"><img alt="Left page" /></div>
+                            <div class="book-spine"></div>
+                            <div class="book-page book-page-right"><img alt="Right page" /></div>
+                        </div>
+                        <div class="book-controls" role="navigation" aria-label="PDF spread navigation">
+                            <button type="button" id="book-prev" class="slide-btn" aria-label="Previous spread">‹ Previous</button>
+                            <span id="book-spread-counter" class="slide-counter" aria-live="polite"></span>
+                            <button type="button" id="book-next" class="slide-btn" aria-label="Next spread">Next ›</button>
+                        </div>
+                        <p class="book-loading" id="book-loading">Loading…</p>
+                    </div>
+                    <div class="video-section" id="video-section"></div>
+                    <div class="popup-text" id="popup-full-description"></div>
+                    <div class="popup-credentials" id="popup-credentials"></div>
                 </div>
             </div>
         </div>
 
-        <!-- Full Detail View -->
+        <!-- Full Detail View (separate page) -->
         <div id="detail-view" class="modal detail-modal">
             <div class="modal-content detail-content">
                 <div class="detail-header">
@@ -146,7 +161,7 @@
         <div id="sculpture-view" class="modal detail-modal">
             <div class="modal-content detail-content">
                 <div class="detail-header">
-                    <h2>sculpture/installation</h2>
+                    <h2>art in public space</h2>
                     <a href="#" id="close-sculpture" class="action-link">close</a>
                 </div>
 
@@ -157,6 +172,7 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="index/index.js"></script>
 </body>
 </html>
