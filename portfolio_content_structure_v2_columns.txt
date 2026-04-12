@@ -1,0 +1,36 @@
+Portfolio content — structure v2 (for homepage continuation layout)
+================================================================
+
+Note: The screen recording on your Desktop could not be opened here. This column set follows
+the live page order (index list, then each work as a full-width section: title, meta, short
+text, images, video, long text, book/sketchbook spreads, credits). If your video shows extra
+subsections, use optional_heading_* / optional_text_* or add columns and we can wire them later.
+
+This matches one row per project on index.html, in vertical order:
+
+  A) Index line: list_title (same text as the clickable row on the landing list)
+  B) Section header: display_title (optional), medium + year, short_description
+  C) Image slideshow (0..n files, in order)
+  D) Video: Vimeo ID and/or local video file paths
+  E) Full text: full_description (paragraphs = blank lines inside the cell in Excel)
+  F) Book / zine: either pdf_file OR pdf_page_images (semicolon-separated JPG/PNG paths)
+  G) Footer: credentials
+  H) Optional extra blocks (headings + text) if you later add subsections under the main text
+
+Mapping from old portfolio_content.csv
+--------------------------------------
+  Old "Project name (with numbers...)"     -> list_title
+  Old Year                                 -> year
+  Old Medium                               -> medium (and usually same as category)
+  Old Short description                    -> short_description
+  Old Detailed description                 -> full_description
+  Old Credentials                          -> credentials
+  Old Video 1, Video 2                     -> video_files (add path relative to site root)
+  Old Image 1..4                           -> image_slideshow_files (in order)
+  Old layout with text before/after images -> use optional_* columns OR fold into full_description
+
+If display_title is empty, the site can strip the leading "NN - " from list_title for the big heading.
+
+Separators: use semicolon (;) between multiple file paths in one cell. No spaces required after ;.
+
+layout_variant: leave "standard" unless you need a special build (e.g. drawing_plus_sketchbook for combined gallery + sketchbook like Hieroglyphs). The live site still uses project id in code for that edge case; this column is for your spreadsheet workflow and future importers.

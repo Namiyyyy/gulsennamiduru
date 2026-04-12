@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gülsen Namıduru</title>
+    <link rel="stylesheet" href="index/index.css?v=202604121600">
+</head>
+<body>
+    <div class="container">
+        <header class="landing-header">
+            <div class="landing-top-bar">
+                <div class="landing-top-bar__col landing-top-bar__col--name">Gülsen Namıduru</div>
+                <div class="landing-top-bar__col">
+                    <a href="#about-section" class="landing-nav-link" id="about-link">About</a>
+                </div>
+                <div class="landing-top-bar__col">
+                    <a href="#works-landing" class="landing-nav-link" id="observer-link">Observer</a>
+                </div>
+                <div class="landing-top-bar__col landing-top-bar__col--contact">
+                    <a href="mailto:namidurugg@gmail.com" class="landing-nav-link">Email</a><span class="landing-top-bar__sep">, </span><a href="https://www.instagram.com/gnamiduru/?hl=en" target="_blank" rel="noopener noreferrer" class="landing-nav-link landing-nav-link--external">Instagram</a><span class="landing-ext-arrow" aria-hidden="true">↗</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="works-landing" class="landing-main">
+            <div class="index-column landing-works">
+                <ul id="portfolio-index" class="portfolio-index">
+                    <!-- Will be populated by JavaScript -->
+                </ul>
+            </div>
+        </main>
+
+        <!-- Project bodies: continuation of homepage below the index (no modal) -->
+        <div id="project-sections" class="project-sections" aria-label="Selected works"></div>
+
+        <section id="about-section" class="project-section about-section" aria-labelledby="about-heading">
+            <div class="project-section-inner">
+                <header class="project-section-header">
+                    <div class="project-section-header-bar">
+                        <div class="project-section-header-left">
+                            <h2 id="about-heading" class="project-section-title project-section-title--bar">About</h2>
+                        </div>
+                        <div class="project-section-header-right" aria-hidden="true"></div>
+                    </div>
+                </header>
+                <div class="project-section-body">
+                    <div class="project-section-main-grid">
+                        <div class="project-section-text-col about-section-text">
+                            <div class="popup-text project-full-description">
+                                <p>Coming soon...</p>
+                            </div>
+                        </div>
+                        <div class="about-section-visual">
+                            <img
+                                class="about-section-image"
+                                src="img/about/Dugum.png"
+                                alt=""
+                                width="380"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full-screen image viewer (wire gallery clicks) -->
+        <div id="image-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
+            <button type="button" class="image-lightbox-close" aria-label="Close">×</button>
+            <button type="button" class="image-lightbox-prev" aria-label="Previous image">‹</button>
+            <button type="button" class="image-lightbox-next" aria-label="Next image">›</button>
+            <div class="image-lightbox-stage">
+                <img id="image-lightbox-img" src="" alt="" />
+            </div>
+        </div>
+
+        <!-- Full Detail View (separate page) -->
+        <div id="detail-view" class="modal detail-modal">
+            <div class="modal-content detail-content">
+                <div class="detail-header">
+                    <div>
+                        <h2 id="detail-title"></h2>
+                        <span id="detail-view-medium" class="medium-tag"></span>
+                    </div>
+                    <a href="#" id="close-detail" class="action-link">close</a>
+                </div>
+
+                <div class="detail-images" id="detail-images">
+                    <!-- Images and description will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact View -->
+        <div id="contact-view" class="modal detail-modal">
+            <div class="modal-content detail-content">
+                <div class="detail-header">
+                    <h2>contact</h2>
+                    <a href="#" id="close-contact" class="action-link">close</a>
+                </div>
+
+                <div class="cv-content" id="contact-content">
+                    <!-- Contact content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- CV Page View -->
+        <div id="cv-page-view" class="modal detail-modal">
+            <div class="modal-content detail-content">
+                <div class="detail-header">
+                    <h2>cv</h2>
+                    <a href="#" id="close-cv-page" class="action-link">close</a>
+                </div>
+
+                <div class="cv-content" id="cv-page-content">
+                    <!-- CV page content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Photography View -->
+        <div id="photography-view" class="modal detail-modal">
+            <div class="modal-content detail-content">
+                <div class="detail-header">
+                    <h2>photography</h2>
+                    <a href="#" id="close-photography" class="action-link">close</a>
+                </div>
+
+                <div class="cv-content" id="photography-content">
+                    <!-- Photography content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Video View -->
+        <div id="video-view" class="modal detail-modal">
+            <div class="modal-content detail-content">
+                <div class="detail-header">
+                    <h2>video</h2>
+                    <a href="#" id="close-video" class="action-link">close</a>
+                </div>
+
+                <div class="cv-content" id="video-content">
+                    <!-- Video content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sculpture/Installation View -->
+        <div id="sculpture-view" class="modal detail-modal">
+            <div class="modal-content detail-content">
+                <div class="detail-header">
+                    <h2>art in public space</h2>
+                    <a href="#" id="close-sculpture" class="action-link">close</a>
+                </div>
+
+                <div class="cv-content" id="sculpture-content">
+                    <!-- Sculpture/Installation content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="index/index.js?v=202604121600"></script>
+</body>
+</html>
+

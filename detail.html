@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail - Gülsen Namıduru</title>
+    <link rel="stylesheet" href="index/index.css?v=202604121600">
+</head>
+<body class="detail-page">
+    <div class="container">
+        <div class="detail-page-content">
+            <div class="detail-header">
+                <div>
+                    <h2 id="detail-title"></h2>
+                    <span id="detail-medium" class="medium-tag"></span>
+                </div>
+                <a href="index.html" class="action-link">close</a>
+            </div>
+
+            <div class="detail-images" id="detail-images">
+                <!-- Images and description will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="index/index.js?v=202604121600"></script>
+    <script>
+        // Get project ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = parseInt(urlParams.get('id'));
+        
+        // Find project in portfolioData
+        const project = portfolioData.projects.find(p => p.id === projectId);
+        
+            if (project) {
+            const detailTitle = document.getElementById('detail-title');
+            const detailMedium = document.getElementById('detail-medium');
+            const detailImages = document.getElementById('detail-images');
+            
+            detailTitle.textContent = `${project.title} (${project.year})`;
+            if (project.medium) {
+                detailMedium.textContent = project.medium;
+                detailMedium.style.display = 'inline';
+            } else {
+                detailMedium.style.display = 'none';
+            }
+            
+            const imagePaths = project.images && project.images.length > 0 ? project.images.slice() : [];
+
+            detailImages.innerHTML = '';
+
+            const vimeoRaw = project.vimeoId != null ? String(project.vimeoId).trim() : '';
+            const hasVimeo = vimeoRaw && /^\d+$/.test(vimeoRaw);
+
+            // Main slot: Vimeo embed, else first image, else video placeholder (no repo-hosted video files).
+            if (hasVimeo) {
+                const frame = document.createElement('div');
+                frame.className = 'project-wire-main-frame';
+                const wrapper = document.createElement('div');
+                wrapper.className = 'video-wrapper';
+                const iframe = document.createElement('iframe');
+                iframe.src = 'https://player.vimeo.com/video/' + vimeoRaw;
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+                iframe.setAttribute('allowfullscreen', 'true');
+                iframe.style.cssText =
+                    'display:block;width:100%;aspect-ratio:16/9;height:auto;min-height:200px;border:0;';
+                wrapper.appendChild(iframe);
+                frame.appendChild(wrapper);
+                detailImages.appendChild(frame);
+            } else if (imagePaths.length > 0) {
+                const frame = document.createElement('div');
+                frame.className = 'project-wire-main-frame';
+                const img = document.createElement('img');
+                img.className = 'project-wire-main-img';
+                img.src = imagePaths[0];
+                img.alt = project.title;
+                frame.appendChild(img);
+                detailImages.appendChild(frame);
+            } else if (project.videoPlaceholder) {
+                const frame = document.createElement('div');
+                frame.className = 'project-wire-main-frame';
+                const ph = document.createElement('div');
+                ph.className = 'project-video-placeholder';
+                ph.setAttribute('aria-label', 'Video embed');
+                frame.appendChild(ph);
+                detailImages.appendChild(frame);
+            }
+
+            // Description block (always shown)
+            const descDiv = document.createElement('div');
+            descDiv.className = 'detail-description';
+            const fullText = project.fullDescription != null ? String(project.fullDescription) : '';
+            const paragraphs = fullText.split(/\n\n+/);
+            descDiv.innerHTML = paragraphs
+                .map(function (p) {
+                    const trimmed = p.trim().replace(/\n/g, ' ');
+                    return '<p>' + boldWorkTitleInText(trimmed, project) + '</p>';
+                })
+                .join('');
+            detailImages.appendChild(descDiv);
+
+            // Extra images carousel for "01 - Hieroglyphs"
+            if (project.id === 3 && project.images && project.images.length > 0) {
+                const extraImages = project.images.slice(1); // everything after the first image
+                if (extraImages.length > 0) {
+                    const carouselContainer = document.createElement('div');
+                    carouselContainer.className = 'detail-carousel';
+                    carouselContainer.style.marginTop = '30px';
+                    carouselContainer.style.textAlign = 'center';
+
+                    const carouselImage = document.createElement('img');
+                    carouselImage.style.maxWidth = '100%';
+                    carouselImage.style.height = 'auto';
+                    carouselImage.style.display = 'block';
+                    carouselImage.style.margin = '0 auto 10px auto';
+
+                    const controls = document.createElement('div');
+                    controls.style.display = 'flex';
+                    controls.style.justifyContent = 'space-between';
+                    controls.style.alignItems = 'center';
+
+                    const prevBtn = document.createElement('button');
+                    prevBtn.textContent = 'Previous';
+                    prevBtn.style.fontSize = '12px';
+
+                    const nextBtn = document.createElement('button');
+                    nextBtn.textContent = 'Next';
+                    nextBtn.style.fontSize = '12px';
+
+                    const counter = document.createElement('span');
+                    counter.style.fontSize = '12px';
+
+                    controls.appendChild(prevBtn);
+                    controls.appendChild(counter);
+                    controls.appendChild(nextBtn);
+
+                    carouselContainer.appendChild(carouselImage);
+                    carouselContainer.appendChild(controls);
+                    detailImages.appendChild(carouselContainer);
+
+                    let currentIndex = 0;
+                    function renderCarousel() {
+                        carouselImage.src = extraImages[currentIndex];
+                        carouselImage.alt = project.title;
+                        counter.textContent = (currentIndex + 1) + ' / ' + extraImages.length;
+                        prevBtn.disabled = currentIndex === 0;
+                        nextBtn.disabled = currentIndex === extraImages.length - 1;
+                    }
+
+                    prevBtn.addEventListener('click', function() {
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            renderCarousel();
+                        }
+                    });
+
+                    nextBtn.addEventListener('click', function() {
+                        if (currentIndex < extraImages.length - 1) {
+                            currentIndex++;
+                            renderCarousel();
+                        }
+                    });
+
+                    renderCarousel();
+                }
+            }
+
+            // Sub-headers and carousels for "02 - Abandoned Battleground" (Abandoned Playground)
+            if (project.id === 2 && project.images && project.images.length > 0) {
+                const neighbourhoods = [
+                    'Wedding',
+                    'Moabit',
+                    'Pankow',
+                    'Neukölln',
+                    'Kreuzberg'
+                ];
+                // Map first up-to-5 images to neighbourhoods
+                neighbourhoods.forEach((name, idx) => {
+                    if (idx >= project.images.length) return;
+                    const section = document.createElement('div');
+                    section.style.marginTop = '30px';
+
+                    const heading = document.createElement('h3');
+                    heading.textContent = name;
+                    heading.style.fontSize = '16px';
+                    heading.style.marginBottom = '10px';
+                    section.appendChild(heading);
+
+                    const carouselContainer = document.createElement('div');
+                    carouselContainer.className = 'detail-carousel';
+                    carouselContainer.style.textAlign = 'center';
+
+                    const carouselImage = document.createElement('img');
+                    carouselImage.style.maxWidth = '100%';
+                    carouselImage.style.height = 'auto';
+                    carouselImage.style.display = 'block';
+                    carouselImage.style.margin = '0 auto 10px auto';
+
+                    const controls = document.createElement('div');
+                    controls.style.display = 'flex';
+                    controls.style.justifyContent = 'space-between';
+                    controls.style.alignItems = 'center';
+
+                    const prevBtn = document.createElement('button');
+                    prevBtn.textContent = 'Previous';
+                    prevBtn.style.fontSize = '12px';
+
+                    const nextBtn = document.createElement('button');
+                    nextBtn.textContent = 'Next';
+                    nextBtn.style.fontSize = '12px';
+
+                    const counter = document.createElement('span');
+                    counter.style.fontSize = '12px';
+
+                    controls.appendChild(prevBtn);
+                    controls.appendChild(counter);
+                    controls.appendChild(nextBtn);
+
+                    carouselContainer.appendChild(carouselImage);
+                    carouselContainer.appendChild(controls);
+                    section.appendChild(carouselContainer);
+                    detailImages.appendChild(section);
+
+                    // For now each neighbourhood has a single image assigned.
+                    const imagesForNeighbourhood = [project.images[idx]];
+                    let currentIndex = 0;
+                    function renderNeighbourhoodCarousel() {
+                        carouselImage.src = imagesForNeighbourhood[currentIndex];
+                        carouselImage.alt = project.title + ' – ' + name;
+                        counter.textContent = (currentIndex + 1) + ' / ' + imagesForNeighbourhood.length;
+                        prevBtn.disabled = currentIndex === 0;
+                        nextBtn.disabled = currentIndex === imagesForNeighbourhood.length - 1;
+                    }
+
+                    prevBtn.addEventListener('click', function() {
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            renderNeighbourhoodCarousel();
+                        }
+                    });
+
+                    nextBtn.addEventListener('click', function() {
+                        if (currentIndex < imagesForNeighbourhood.length - 1) {
+                            currentIndex++;
+                            renderNeighbourhoodCarousel();
+                        }
+                    });
+
+                    renderNeighbourhoodCarousel();
+                });
+            }
+
+            const hasMainMedia = hasVimeo || imagePaths.length > 0 || project.videoPlaceholder;
+            if (!hasMainMedia) {
+                const info = document.createElement('p');
+                info.style.fontSize = '14px';
+                info.style.color = '#666';
+                info.textContent = 'No media available';
+                detailImages.insertBefore(info, descDiv);
+            }
+        } else {
+            document.body.innerHTML = '<div style="padding: 40px;"><h2>Project not found</h2><a href="index.html">Back to portfolio</a></div>';
+        }
+    </script>
+</body>
+</html>
+

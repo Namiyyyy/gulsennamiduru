@@ -1,0 +1,37 @@
+Portfolio content — structure v3 (wireframe bar + two columns + full-screen images)
+===================================================================================
+
+Matches the homepage work sections:
+
+1) HEADER BAR (one row, three zones)
+   - Left: list_title — same numbering as the index (e.g. "06 - Voices…").
+   - Centre: header_center_tag — short grey reference (e.g. "Type 0-24-DK" in the mockup).
+     If empty in the sheet, the site can fall back to medium. Optional in JS: project.headerCode.
+   - Right: three lines. If header_right_line1/2/3 are empty, the site uses:
+     line1 = title without leading "NN - ", line2 = year, line3 = short_description (or medium).
+
+2) MAIN AREA (two columns)
+   - Left: full_description — first paragraph is shown bold (lead), following paragraphs normal.
+   - Right: image_main_and_thumbs — semicolon-separated paths in order: first = large main image,
+     rest = smaller thumbnails with captions below (Figure 1, 2, … or image_thumb_captions).
+   - Video (Vimeo or files) stacks under the gallery in the right column when present.
+
+3) BELOW THE GRID (full width)
+   - Book / zine from pdf_file + pdf_page_images (or rendered PDF).
+   - credentials centred at the bottom.
+
+4) FULL-SCREEN VIEWER
+   - Any wire-gallery image or book page image opens the same lightbox: large image, × top-right,
+     ‹ › on the sides, Esc and arrow keys, click backdrop to close.
+
+Column notes
+------------
+image_thumb_captions: semicolon-separated; one caption per thumbnail only (not the main image).
+image_main_and_thumbs: first path = hero; remaining = right column stack.
+
+When importing into index.js, map to:
+  title, headerCode?, year, medium, category, shortDescription, fullDescription, credentials,
+  vimeoId, videos[], images[], imageCaptions[], pdf, pdfImages[]
+
+This file is UTF-8. For Excel on macOS/Windows, use "portfolio_content_structure_v3.csv" and
+choose UTF-8 if prompted when opening.

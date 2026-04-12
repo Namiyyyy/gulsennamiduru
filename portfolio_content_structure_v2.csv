@@ -1,0 +1,7 @@
+sort_order,project_id,list_title,display_title,year,medium,category,short_description,full_description,credentials,vimeo_id,video_files,image_slideshow_files,pdf_file,pdf_page_images,layout_variant,optional_heading_after_media,optional_text_after_media,optional_heading_2,optional_text_2,internal_notes
+1,7,06 - Voices of Leopoldplatz,,2025,video,video,(paste short text),(paste long text — use Alt+Enter in Excel for new paragraphs),(paste credits),1169706188,,,,,standard,,,,,vimeo_id = digits only; leave empty if using video_files instead
+2,6,05 - Pirate Pedagogies,,2025,art in public space,art in public space,(paste),(paste),(paste),,,,img/pirate_pedagogies/ebesobe_zine.pdf,(paste semicolon-separated page JPG paths),standard,,,,,If pdf_page_images is filled the site can use JPEG spreads instead of live PDF
+3,5,04 - Sylwester Stalker,,2025,video,video,(paste),(paste),(paste),,(paste path1;path2 if local files),,,,standard,,,,,
+4,1,03 - Architectures Of Sky,,2024,photography,photography,(paste),(paste),(paste),,,(paste paths separated by ;),,,standard,,,,,
+5,2,02 - Abandoned Battleground,,2023,photography,photography,(paste),(paste),(paste),,,(paste paths separated by ;),,,standard,,,,,
+6,3,01 - Hieroglyphs,,2022,drawing,drawing,(paste),(paste),(paste),,,(paste slideshow paths),(paste sketchbook page paths separated by ;),drawing_plus_sketchbook,,,,,Reserved label for gallery + sketchbook in one project

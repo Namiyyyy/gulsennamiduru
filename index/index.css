@@ -1,0 +1,1352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --text: #000000;
+    /* One shared template so video slots, main image frames, and book previews share the same media width */
+    --project-section-grid-cols: minmax(180px, 24%) minmax(260px, 1.15fr) minmax(200px, 26%);
+}
+
+@font-face {
+    font-family: 'Leelawadee';
+    src: url('../fonts/Leelawadee.woff2') format('woff2'),
+         url('../fonts/Leelawadee.woff') format('woff'),
+         url('../fonts/Leelawadee.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Leelawadee', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background: white;
+    color: var(--text);
+    line-height: 1.6;
+}
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* —— Landing (Cargo-style top bar + large work list) —— */
+.landing-header {
+    width: 100%;
+}
+
+.landing-top-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) repeat(2, minmax(0, 1fr)) minmax(0, 1.15fr);
+    gap: 1rem 2rem;
+    align-items: start;
+    padding: 1.35rem 20px 1.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: clamp(11px, 1.15vw, 14px);
+    line-height: 1.45;
+    color: var(--text);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.landing-top-bar__col--name {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.landing-top-bar__col--contact {
+    text-align: right;
+    justify-self: end;
+    max-width: 100%;
+}
+
+.landing-nav-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border: none;
+    background: none;
+    font: inherit;
+    padding: 0;
+}
+
+.landing-nav-link:hover,
+.landing-nav-link:focus-visible {
+    opacity: 0.5;
+}
+
+.landing-nav-link:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 2px;
+}
+
+.landing-top-bar__sep {
+    opacity: 0.85;
+}
+
+.landing-ext-arrow {
+    display: inline-block;
+    margin-left: 0.15em;
+    font-size: 0.95em;
+    vertical-align: 0.05em;
+}
+
+.landing-main {
+    width: 100%;
+    padding: 0;
+}
+
+.index-column {
+    width: 100%;
+    padding: 0;
+}
+
+.portfolio-index {
+    list-style: none;
+    width: 100%;
+}
+
+/* Hero-scale work titles (reference: large stacked sans headline) */
+.landing-works .portfolio-index li {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: clamp(2.44rem, 10vw, 7.29rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+    margin-bottom: 0;
+    padding: 0.08em 20px 0.08em 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    width: 100%;
+    color: var(--text);
+    border-bottom: 1px solid transparent;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.landing-works .portfolio-index li:hover {
+    opacity: 0.55;
+}
+
+.content-column {
+    display: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-content {
+    background: white;
+    width: 25%;
+    min-width: 300px;
+    padding: 40px;
+    margin: 0;
+    border: 1px solid #000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Inline project sections (continuation of homepage) */
+.project-sections {
+    width: 100%;
+    background: #fff;
+}
+
+.project-section {
+    padding: 48px 20px 56px;
+    scroll-margin-top: 16px;
+}
+
+.project-section--flash {
+    animation: project-section-flash 1.15s ease;
+}
+
+@keyframes project-section-flash {
+    0% { background-color: rgba(0, 0, 0, 0.04); }
+    100% { background-color: transparent; }
+}
+
+.project-section-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Rule above title only (no line between header and body / explanation) */
+.project-section-header {
+    margin-bottom: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.project-section-header-bar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 12px 24px;
+}
+
+.project-section-header-left {
+    min-width: 0;
+}
+
+.project-section-title--bar {
+    font-size: clamp(15px, 1.9vw, 22px);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+    text-align: left;
+    line-height: 1.2;
+    white-space: pre-line;
+}
+
+.project-section-header-right {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--text);
+    justify-self: end;
+    max-width: 100%;
+}
+
+.project-section-header-right > div + div {
+    margin-top: 0.35em;
+}
+
+.project-header-right-line1 {
+    font-weight: normal;
+    color: var(--text);
+    letter-spacing: 0.02em;
+}
+
+.project-header-right-line2 {
+    color: var(--text);
+}
+
+.project-header-right-line3 {
+    color: var(--text);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Content: text col | book (optional) | wire gallery row | video row */
+.project-section-main-grid {
+    display: grid;
+    grid-template-columns: var(--project-section-grid-cols);
+    grid-template-rows: auto auto;
+    gap: 28px 32px;
+    align-items: start;
+    min-width: 0;
+}
+
+.project-section-text-col {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.project-section-book-slot {
+    display: none;
+    grid-column: 2 / 4;
+    grid-row: 1;
+    min-width: 0;
+    align-self: start;
+}
+
+.project-section-book-slot.has-book {
+    display: block;
+}
+
+.project-section-gallery-row {
+    display: none;
+    grid-column: 2 / 4;
+    grid-row: 1;
+    min-width: 0;
+    align-self: start;
+}
+
+/* Main rectangle full width; square thumbs stacked below; video row matches this column width */
+.project-section-gallery-row.has-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.project-wire-main-slot,
+.project-wire-figures-slot {
+    min-width: 0;
+}
+
+/* Hero uses full media column width — same footprint as video / placeholder in .project-section-video-slot */
+.project-section-gallery-row.has-gallery .project-wire-main-slot {
+    width: 100%;
+}
+
+.project-section-gallery-row.has-gallery .project-wire-main-frame {
+    width: 100%;
+    max-width: 100%;
+}
+
+.project-section-video-slot .video-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+.project-section-video-slot .video-wrapper iframe {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 200px;
+    border: 0;
+}
+
+/* Media column: video sits on row 1 when alone; row 2 when a gallery row is present; row 3 in gallery+book layout */
+.project-section-video-slot {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    display: none;
+    min-width: 0;
+}
+
+.project-section-video-slot.has-video {
+    display: block;
+}
+
+.project-section-main-grid--has-gallery-row .project-section-video-slot.has-video {
+    grid-row: 2;
+}
+
+/* Empty media slot (text-only projects): same footprint as video placeholder */
+.project-section-media-placeholder {
+    display: none;
+    grid-column: 2 / 4;
+    grid-row: 1;
+    min-width: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    background: #f2f2f2;
+    box-sizing: border-box;
+}
+
+.project-section-media-placeholder.is-visible {
+    display: block;
+}
+
+/* Gallery + book: text col 1 | book cols 2–3 row 1; gallery cols 2–3 row 2 */
+.project-section-main-grid--gallery-book .project-section-text-col {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.project-section-main-grid--gallery-book .project-section-book-slot.has-book {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    display: block;
+}
+
+.project-section-main-grid--gallery-book .project-section-gallery-row.has-gallery {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    grid-template-columns: 1fr;
+}
+
+.project-section-main-grid--gallery-book .project-section-video-slot.has-video {
+    grid-row: 3;
+}
+
+.project-section-main-grid--gallery-book {
+    grid-template-rows: auto auto auto;
+}
+
+.project-section-main-grid--gallery-book .project-section-media-placeholder.is-visible {
+    display: none;
+}
+
+/* About: same 3-column project grid — text col 1, image cols 2–3 */
+.about-section .project-section-main-grid {
+    grid-template-columns: var(--project-section-grid-cols);
+    grid-template-rows: auto;
+}
+
+.about-section .project-section-text-col {
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 100%;
+}
+
+.about-section .about-section-visual {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+    min-width: 0;
+    width: 100%;
+}
+
+.about-section .about-section-image {
+    display: block;
+    max-width: min(100%, 380px);
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+}
+
+/* Book preview beside text: same rules, slightly shorter cap */
+.project-section-book-slot .book-view .book-page img {
+    max-height: min(52vh, 380px);
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+.project-section-book-slot .book-view {
+    margin-bottom: 0;
+}
+
+/* Inline book spread: align with media column (no centering); gutterless spread like a printed book */
+.project-section-book-slot .book-view .book-spread {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 0 minmax(0, 1fr);
+    gap: 0;
+    align-items: end;
+    justify-items: stretch;
+    justify-content: start;
+}
+
+.project-section-book-slot .book-view .book-page {
+    width: 100%;
+    flex: initial;
+    background: transparent;
+    overflow: hidden;
+}
+
+.project-section-book-slot .book-view .book-page-left {
+    justify-content: flex-end;
+}
+
+.project-section-book-slot .book-view .book-page-right {
+    justify-content: flex-start;
+}
+
+.project-section-book-slot .book-view .book-page-left img {
+    object-position: right bottom;
+}
+
+.project-section-book-slot .book-view .book-page-right img {
+    object-position: left bottom;
+}
+
+.project-section-text-col .popup-text {
+    margin-top: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.project-section-text-col .project-gallery-title {
+    margin: 0 0 1em;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+    font-weight: normal;
+    white-space: pre-line;
+    text-align: inherit;
+}
+
+.project-section-text-col .project-full-description .project-body-paragraph,
+.project-section-text-col .project-full-description p {
+    margin: 0 0 1em;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+    font-weight: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.project-section-text-col .project-full-description strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Credits below full description in the text column */
+.project-section-text-col .project-section-body-credits {
+    margin-top: 2em;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #666666;
+    font-weight: normal;
+    white-space: pre-line;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.project-section-text-col .project-section-body-credits strong {
+    font-weight: 700;
+    color: #555555;
+}
+
+.project-section-text-col .project-section-body-credits a {
+    color: #666666;
+}
+
+.project-section-text-col .project-section-body-credits:empty {
+    display: none;
+}
+
+.project-section .popup-credentials.project-credentials {
+    display: none;
+}
+
+.project-section-video-slot .video-section {
+    margin-top: 0;
+}
+
+/* Same footprint as Vimeo iframe: keeps text column width aligned with Voices of Leopoldplatz */
+.project-section-video-slot .project-video-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    background: #f2f2f2;
+    box-sizing: border-box;
+}
+
+/* Main image frame: match video / Vimeo (16:9) so media columns align */
+.project-wire-main-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-wire-main-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: zoom-in;
+}
+
+/* Ensure section / detail rules never shrink the framed hero below the box */
+.project-section .project-wire-main-frame .project-wire-main-img,
+.detail-images .project-wire-main-frame .project-wire-main-img {
+    box-sizing: border-box;
+}
+
+.project-wire-main-frame > video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    background: #000;
+}
+
+/* Figure rows: up to four square frames per row + captions */
+.project-wire-figures-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.project-wire-figures-row {
+    display: grid;
+    gap: 12px;
+    align-items: start;
+    justify-items: end;
+    width: 100%;
+    margin-left: auto;
+}
+
+.project-wire-figures-row--triple {
+    grid-template-columns: repeat(3, minmax(0, 156px));
+    max-width: min(492px, 100%);
+}
+
+.project-wire-figures-row--quad {
+    grid-template-columns: repeat(4, minmax(0, 156px));
+    max-width: min(660px, 100%);
+}
+
+.project-wire-figures-row--pair {
+    grid-template-columns: repeat(2, minmax(0, 156px));
+    max-width: min(324px, 100%);
+}
+
+.project-wire-figures-row--single {
+    grid-template-columns: minmax(0, 156px);
+    max-width: min(156px, 100%);
+    margin-left: auto;
+}
+
+.project-wire-thumb {
+    margin: 0;
+    max-width: 156px;
+}
+
+.project-wire-thumb-frame {
+    width: min(100%, 156px);
+    max-width: 156px;
+    aspect-ratio: 1;
+    height: auto;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-wire-thumb-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+}
+
+.project-wire-thumb figcaption {
+    font-size: 10px;
+    color: var(--text);
+    margin-top: 6px;
+    text-align: right;
+    line-height: 1.3;
+}
+
+/* Abandoned Battleground (id 2): no grey placeholder behind images */
+.project-section[data-project-id="2"] .project-wire-main-frame,
+.project-section[data-project-id="2"] .project-wire-thumb-frame {
+    background: transparent;
+}
+
+/* Full-screen image viewer */
+.image-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: #e6e6e6;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-lightbox.active {
+    display: flex;
+}
+
+.image-lightbox-stage {
+    max-width: 94vw;
+    max-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+}
+
+.image-lightbox-stage img {
+    max-width: 94vw;
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.image-lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text);
+    z-index: 2002;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.image-lightbox-prev,
+.image-lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text);
+    z-index: 2002;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.image-lightbox-prev {
+    left: 14px;
+}
+
+.image-lightbox-next {
+    right: 14px;
+}
+
+.image-lightbox-close:hover,
+.image-lightbox-prev:hover,
+.image-lightbox-next:hover {
+    opacity: 0.85;
+}
+
+/* Popup: title / medium, year / short description (reused class names in section headers) */
+.popup-header-rows {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1em;
+}
+
+/* Medium, year (single line, comma-separated) */
+.popup-medium-year {
+    font-size: 16px; /* same as short description */
+    color: var(--text);
+    font-weight: normal;
+    font-style: normal;
+    text-transform: lowercase;
+}
+
+/* Extra spacing only after short description */
+.popup-short-description {
+    margin-bottom: 0.5em;
+}
+
+.detail-header-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+
+/* Short description (italic) - 2x */
+.popup-short-description {
+    color: var(--text);
+    font-style: italic;
+    font-size: 16px; /* 2x */
+}
+
+.action-link {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.action-link:hover {
+    opacity: 0.6;
+}
+
+/* Image Slideshow */
+.image-slideshow {
+    margin-bottom: 30px;
+}
+
+/* Video section (separate from images) */
+.video-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    margin-bottom: 20px;
+}
+
+.video-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.popup-video {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    display: block;
+    background: #000;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    max-height: 50vh;
+}
+
+.slideshow-container img,
+.slideshow-container video {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    display: block;
+    cursor: ew-resize;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.slideshow-container img.slide-image,
+.slideshow-container video.slide-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    z-index: 1;
+}
+
+.slideshow-container img.slide-image.hidden,
+.slideshow-container video.slide-video.hidden {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.slideshow-container img.slide-image:first-child,
+.slideshow-container video.slide-video:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+.slideshow-container video {
+    background: #000;
+}
+
+.slideshow-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.slide-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    padding: 5px 10px;
+    transition: opacity 0.2s;
+}
+
+.slide-btn:hover {
+    opacity: 0.6;
+}
+
+.slide-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.slide-counter {
+    font-size: 11px;
+    color: var(--text);
+}
+
+/* PDF book viewer: spread view, left | spine | right, arrows + keyboard */
+.book-view {
+    display: none;
+    margin-bottom: 20px;
+    min-height: 200px;
+}
+
+.book-view .book-spread {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+    max-width: 100%;
+    margin-bottom: 15px;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+}
+
+/* Equal-width page columns; images share width and meet at the gutter (no gap) */
+.book-view .book-page {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 0;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: #fff;
+}
+
+.book-view .book-page-left {
+    order: 1;
+    justify-content: flex-end;
+}
+
+.book-view .book-page-right {
+    order: 3;
+    justify-content: flex-start;
+}
+
+.book-view .book-page img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 66vh;
+    object-fit: contain;
+    object-position: bottom center;
+    display: block;
+    margin: 0;
+}
+
+.book-view .book-spine {
+    order: 2;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: none;
+    background: transparent;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.book-view .book-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-view .book-controls .slide-btn {
+    min-width: 60px;
+    font-size: 11px;
+}
+
+.book-view .book-loading {
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--text);
+    text-align: center;
+}
+
+.book-view .book-loading a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+/* Shared modal body and text (popup + detail modals) */
+.modal-body {
+    margin-bottom: 0;
+    overflow-y: auto;
+}
+
+/* Text space in project popup (below slideshow/book) */
+.popup-text {
+    margin-top: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 16px; /* match medium, year, short description */
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 0;
+}
+
+.popup-text p {
+    margin: 0 0 1em 0;
+}
+
+.popup-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Credentials (centered, at the end of page) */
+.popup-credentials {
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px; /* slightly smaller than body/medium text */
+    line-height: 1.5;
+    color: var(--text);
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* All modals: scrollable content */
+.modal-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal .cv-content {
+    max-height: none;
+    overflow-y: visible;
+}
+
+.modal-text,
+.cv-content {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.modal-text p,
+.cv-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Detail View */
+/* Detail View - Full page with frame */
+body.detail-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+body.detail-page .container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.detail-page-content {
+    width: calc(100% - 1cm);
+    height: calc(100% - 1cm);
+    min-height: calc(100vh - 1cm);
+    margin: 0.5cm;
+    padding: 0;
+    border: 1px solid #000;
+    background: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.detail-modal.active {
+    display: block;
+    background: transparent;
+}
+
+.detail-modal .modal-content {
+    width: 50%;
+    min-width: 400px;
+    padding: 40px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+    background: white;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 40px;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.detail-header > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.detail-header h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text);
+    text-align: center;
+    margin: 0;
+}
+
+/* Keep modal titles at 16px */
+#contact-view .detail-header h2,
+#cv-page-view .detail-header h2,
+#photography-view .detail-header h2,
+#video-view .detail-header h2,
+#sculpture-view .detail-header h2,
+.detail-modal .action-link {
+    font-size: 16px;
+}
+
+.detail-images {
+    margin-bottom: 30px;
+    padding: 0 40px 40px 40px;
+}
+
+.detail-images img,
+.detail-images video {
+    width: 100%;
+    height: auto;
+    max-height: 66.66vh;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* First hero: same 16:9 frame as index; overrides loose img rules above */
+.detail-images .project-wire-main-frame {
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.detail-images .project-wire-main-frame .project-wire-main-img,
+.detail-images .project-wire-main-frame > video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    margin-bottom: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.detail-images video {
+    background: #000;
+}
+
+.detail-description {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: left;
+    color: var(--text);
+}
+
+.detail-description p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text);
+}
+
+.detail-description strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Carousels in detail view (Hieroglyphs images + sketchbook pages) */
+.detail-carousel button,
+.detail-carousel span {
+    font-size: 16px; /* match medium/year size, smaller than body text on mobile */
+}
+
+/* CV / modal content (links, headings) */
+.cv-content p {
+    margin-bottom: 20px;
+}
+
+.cv-content a {
+    font-size: 16px;
+}
+
+.cv-content strong {
+    font-size: 16px;
+}
+
+.cv-content h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.cv-content h3 strong {
+    font-weight: bold;
+}
+
+.cv-content h3:first-of-type {
+    margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .landing-top-bar {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 1.25rem;
+        padding: 1rem 16px 1.25rem;
+    }
+
+    .landing-top-bar__col--contact {
+        grid-column: 1 / -1;
+        text-align: left;
+        justify-self: start;
+    }
+
+    .landing-works .portfolio-index li {
+        font-size: clamp(1.88rem, 12.5vw, 4.16rem);
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .modal.active {
+        display: block;
+    }
+
+    .project-section {
+        padding: 36px 16px 44px;
+    }
+
+    .project-section-header-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .project-section-header-right {
+        text-align: right;
+        justify-self: end;
+        width: 100%;
+    }
+
+    .project-section-main-grid,
+    .project-section-main-grid--gallery-book {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
+
+    .project-section-main-grid {
+        gap: 24px;
+    }
+
+    .project-section-text-col,
+    .project-section-book-slot.has-book,
+    .project-section-gallery-row.has-gallery,
+    .project-section-video-slot,
+    .project-section-media-placeholder.is-visible,
+    .about-section .project-section-text-col,
+    .about-section .about-section-visual {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .about-section .about-section-visual {
+        justify-self: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-section .about-section-image {
+        max-width: min(100%, 320px);
+        margin: 0 auto;
+    }
+
+    .project-section-gallery-row.has-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-section-video-slot.has-video {
+        grid-column: 1;
+    }
+
+    .project-wire-main-frame {
+        max-height: none;
+    }
+
+    .project-section-gallery-row.has-gallery .project-wire-main-frame {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project-wire-figures-row--single {
+        max-width: 100%;
+    }
+
+    .action-link {
+        font-size: 18px;
+    }
+
+    .detail-modal.active {
+        display: block;
+        background: transparent;
+    }
+
+    .detail-modal .modal-content {
+        width: 95%;
+        min-width: 280px;
+        padding: 30px 20px;
+        max-height: 95vh;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        right: auto;
+        z-index: 1002;
+    }
+
+    .detail-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .detail-header h2 {
+        font-size: 28px;
+        min-width: auto;
+    }
+
+    .detail-description {
+        font-size: 20px;
+    }
+}
+
