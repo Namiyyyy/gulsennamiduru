@@ -2,10 +2,10 @@
 # Regenerate per-project pages at /{slug}/index.html from portfolio slugs in index.js.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-JS="$ROOT/index/index.js"
-ASSET_V="${ASSET_V:-202604231200}"
+ASSET_V="${ASSET_V:-202610272100}"
 
 slugs=(
+  urban-ecotons-making-of-a-shoreline
   voices-of-leopoldplatz
   pirate-pedagogies
   sylwester-stalker
@@ -16,6 +16,7 @@ slugs=(
 )
 
 titles=(
+  "Urban Ecotons: Making Of A Shoreline"
   "Voices of Leopoldplatz"
   "Pirate Pedagogies"
   "Sylwester Stalker"
@@ -39,18 +40,21 @@ render_page() {
     <title>${title} — Gülsen Namıduru</title>
     <link rel="stylesheet" href="../index/index.css?v=${ASSET_V}">
 </head>
-<body class="project-page">
+<body>
     <div class="container">
         <header class="landing-header">
             <div class="landing-top-bar">
                 <div class="landing-top-bar__col landing-top-bar__col--name">
-                    <a href="../index.html" class="landing-nav-link">Gülsen Namıduru</a>
+                    <a href="../index.html" class="landing-nav-link landing-nav-link--site-name">Gülsen Namıduru</a>
                 </div>
                 <div class="landing-top-bar__col">
                     <a href="../index.html#about-section" class="landing-nav-link">About</a>
                 </div>
                 <div class="landing-top-bar__col">
-                    <a href="../index.html#works-landing" class="landing-nav-link">Observer</a>
+                    <a href="../index.html#works-landing" class="landing-nav-link">Works</a>
+                </div>
+                <div class="landing-top-bar__col">
+                    <a href="https://ebesobekollektiv.com" target="_blank" rel="noopener noreferrer" class="landing-nav-link landing-nav-link--external">EBE SOBE</a><span class="landing-ext-arrow" aria-hidden="true">↗</span>
                 </div>
                 <div class="landing-top-bar__col landing-top-bar__col--contact">
                     <a href="mailto:namidurugg@gmail.com" class="landing-nav-link">Email</a><span class="landing-top-bar__sep">, </span><a href="https://www.instagram.com/gnamiduru/?hl=en" target="_blank" rel="noopener noreferrer" class="landing-nav-link landing-nav-link--external">Instagram</a><span class="landing-ext-arrow" aria-hidden="true">↗</span>
@@ -58,15 +62,21 @@ render_page() {
             </div>
         </header>
 
-        <main class="project-page-main" aria-label="${title}">
-            <div
-                id="project-sections"
-                class="project-sections project-sections--single"
-                data-page-mode="single"
-                data-project-slug="${slug}"
-                aria-label="Work"
-            ></div>
-        </main>
+        <div class="project-page-hero-band">
+            <div class="project-page-hero-row">
+                <div class="project-page-hero-title-col">
+                    <h1 class="project-page-hero-title">${title}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div
+            id="project-sections"
+            class="project-sections"
+            data-page-mode="single"
+            data-project-slug="${slug}"
+            aria-label="Selected works"
+        ></div>
 
         <div id="image-lightbox" class="image-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
             <button type="button" class="image-lightbox-close" aria-label="Close">×</button>

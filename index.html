@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gülsen Namıduru</title>
-    <link rel="stylesheet" href="index/index.css?v=202604121600">
+    <link rel="stylesheet" href="index/index.css?v=202610272100">
 </head>
 <body>
     <div class="container">
@@ -15,7 +15,10 @@
                     <a href="#about-section" class="landing-nav-link" id="about-link">About</a>
                 </div>
                 <div class="landing-top-bar__col">
-                    <a href="#works-landing" class="landing-nav-link" id="observer-link">Observer</a>
+                    <a href="#works-landing" class="landing-nav-link" id="observer-link">Works</a>
+                </div>
+                <div class="landing-top-bar__col">
+                    <a href="https://ebesobekollektiv.com" target="_blank" rel="noopener noreferrer" class="landing-nav-link landing-nav-link--external">EBE SOBE</a><span class="landing-ext-arrow" aria-hidden="true">↗</span>
                 </div>
                 <div class="landing-top-bar__col landing-top-bar__col--contact">
                     <a href="mailto:namidurugg@gmail.com" class="landing-nav-link">Email</a><span class="landing-top-bar__sep">, </span><a href="https://www.instagram.com/gnamiduru/?hl=en" target="_blank" rel="noopener noreferrer" class="landing-nav-link landing-nav-link--external">Instagram</a><span class="landing-ext-arrow" aria-hidden="true">↗</span>
@@ -31,9 +34,6 @@
             </div>
         </main>
 
-        <!-- Project bodies: continuation of homepage below the index (no modal) -->
-        <div id="project-sections" class="project-sections" aria-label="Selected works"></div>
-
         <section id="about-section" class="project-section about-section" aria-labelledby="about-heading">
             <div class="project-section-inner">
                 <header class="project-section-header">
@@ -46,11 +46,6 @@
                 </header>
                 <div class="project-section-body">
                     <div class="project-section-main-grid">
-                        <div class="project-section-text-col about-section-text">
-                            <div class="popup-text project-full-description">
-                                <p>Coming soon...</p>
-                            </div>
-                        </div>
                         <div class="about-section-visual">
                             <img
                                 class="about-section-image"
@@ -60,6 +55,15 @@
                                 loading="lazy"
                                 decoding="async"
                             />
+                        </div>
+                        <div class="project-section-text-col about-section-text">
+                            <div class="popup-text project-full-description">
+                                <p class="project-body-paragraph">“One becomes the place they live in.”</p>
+                                <p class="project-body-paragraph about-section-attribution">— Edip Cansever</p>
+                                <p class="project-body-paragraph">Working across photography, audiovisual works, and situated workshops, Gülsen Namıduru explores how people and their conditions of life become perceptible through space. Her work considers how inner states, emotions, and desires take form in spatial arrangements and atmospheres, becoming legible through people’s presence, movement, and the traces they leave behind.</p>
+                                <p class="project-body-paragraph">Drawn to urban edges and transitional spaces, she attends to places saturated with objects, activities, and social conditions, where affects take material form, as well as to spaces emptied out, where absence becomes perceptible. These encounters often evoke unease or estrangement.</p>
+                                <p class="project-body-paragraph">Her practice begins with a game of proximity: looking from near and far, moving between intimacy and distance. This tension reflects a human obsession to uncover what lies beyond the visible while remaining at a safe remove. Through zooming, framing, and stripping images of information, she creates compositions that withhold as much as they reveal. Negative space becomes an active element, while the frame marks both the limits of what can be known and the possibility of what remains unknown. Informed by literature and ethnography, her work moves between media, translating spatial encounters into images, sounds, and collective situations.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,7 +76,7 @@
             <button type="button" class="image-lightbox-prev" aria-label="Previous image">‹</button>
             <button type="button" class="image-lightbox-next" aria-label="Next image">›</button>
             <div class="image-lightbox-stage">
-                <img id="image-lightbox-img" src="" alt="" />
+                <img id="image-lightbox-img" src="" alt="" decoding="async" />
             </div>
         </div>
 
@@ -165,7 +169,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script src="index/index.js?v=202604121600"></script>
+    <script src="index/index.js?v=202610272100"></script>
 </body>
 </html>
 

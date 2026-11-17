@@ -3,7 +3,55 @@ const portfolioData = {
     title: "Gülsen Namıduru",
     projects: [
         {
+            id: 8,
+            slug: "urban-ecotons-making-of-a-shoreline",
+            title: "07 - Urban Ecotons: Making Of A Shoreline",
+            workItem: "Urban Ecotons: Making Of A Shoreline",
+            sectionTitle: "Urban Ecotons: Making Of A Shoreline",
+            year: "",
+            category: "photography",
+            medium: "photography",
+            shortDescription:
+                "A photography series focusing on how a line from a distance, a shoreline, spatialises.",
+            fullDescription:
+                "A photography series focusing on how a line from a distance, a shoreline, spatialises.",
+            images: [],
+            pdf: "",
+            bookLayoutMode: "page",
+            pdfImages: [
+                "img/urban_ecotons/pages/strip-show-page-01.jpg",
+                "img/urban_ecotons/pages/strip-show-page-02.jpg",
+                "img/urban_ecotons/pages/strip-show-page-03.jpg",
+                "img/urban_ecotons/pages/strip-show-page-04.jpg",
+                "img/urban_ecotons/pages/strip-show-page-05.jpg",
+                "img/urban_ecotons/pages/strip-show-page-06.jpg",
+                "img/urban_ecotons/pages/strip-show-page-07.jpg",
+                "img/urban_ecotons/pages/strip-show-page-08.jpg",
+                "img/urban_ecotons/pages/strip-show-page-09.jpg",
+                "img/urban_ecotons/pages/strip-show-page-10.jpg",
+                "img/urban_ecotons/pages/strip-show-page-11.jpg",
+                "img/urban_ecotons/pages/strip-show-page-12.jpg",
+                "img/urban_ecotons/pages/strip-show-page-13.jpg",
+                "img/urban_ecotons/pages/strip-show-page-14.jpg",
+                "img/urban_ecotons/pages/strip-show-page-15.jpg",
+                "img/urban_ecotons/pages/strip-show-page-16.jpg",
+                "img/urban_ecotons/pages/strip-show-page-17.jpg",
+                "img/urban_ecotons/pages/strip-show-page-18.jpg",
+                "img/urban_ecotons/pages/strip-show-page-19.jpg",
+                "img/urban_ecotons/pages/strip-show-page-20.jpg",
+                "img/urban_ecotons/pages/strip-show-page-21.jpg",
+                "img/urban_ecotons/pages/strip-show-page-22.jpg",
+                "img/urban_ecotons/pages/strip-show-page-23.jpg",
+                "img/urban_ecotons/pages/strip-show-page-24.jpg",
+                "img/urban_ecotons/pages/strip-show-page-25.jpg",
+                "img/urban_ecotons/pages/strip-show-page-26.jpg",
+                "img/urban_ecotons/pages/strip-show-page-27.jpg"
+            ],
+            credentials: ""
+        },
+        {
             id: 7,
+            slug: "voices-of-leopoldplatz",
             title: "06 - Voices of Leopoldplatz",
             workItem: "Voices of Leopoldplatz",
             sectionTitle:
@@ -32,6 +80,7 @@ const portfolioData = {
         },
         {
             id: 6,
+            slug: "pirate-pedagogies",
             title: "05 - Pirate Pedagogies",
             workItem: "Pirate Pedagogies",
             sectionTitle:
@@ -40,33 +89,29 @@ const portfolioData = {
             category: "art in public space",
             medium: "art in public space",
             // ========== PROJECT DESCRIPTION START ==========
-            shortDescription: "A short zine briefly presenting Pirate Pedagogies and EBE SOBE collective.",
-            fullDescription: "Pirate Pedagogies is a site-specific project exploring the tactile and acoustic features of urban space through participatory workshops with children. By comparing and bringing together visual and textual experiences, the project learns from children's bodily experience of space. Through play, the materials found in spaces of play used as a mirror reflecting emotional landscapes of the participants.",
+            shortDescription:
+                "An ongoing site-analysis format exploring how a place can be read through texture, sound, and movement.",
+            fullDescription:
+                "An ongoing site-analysis format exploring how a place can be read through texture, sound, and movement.",
             // ========== PROJECT DESCRIPTION END ==========
             images: [],
-            pdf: '',
+            pdf: "",
+            bookLayoutMode: "page",
+            bookOmitLastPages: 0,
             pdfImages: [
-                "img/pirate_pedagogies/zine-07.jpg",
-                "img/pirate_pedagogies/zine-08.jpg",
-                "img/pirate_pedagogies/zine-09.jpg",
-                "img/pirate_pedagogies/zine-10.jpg",
-                "img/pirate_pedagogies/zine-11.jpg",
-                "img/pirate_pedagogies/zine-12.jpg",
-                "img/pirate_pedagogies/zine-13.jpg",
-                "img/pirate_pedagogies/zine-14.jpg",
-                "img/pirate_pedagogies/zine-15.jpg",
-                "img/pirate_pedagogies/zine-16.jpg",
-                "img/pirate_pedagogies/zine-17.jpg",
-                "img/pirate_pedagogies/zine-18.jpg",
-                "img/pirate_pedagogies/zine-19.jpg",
-                "img/pirate_pedagogies/zine-20.jpg",
-                "img/pirate_pedagogies/zine-21.jpg",
-                "img/pirate_pedagogies/zine-27.jpg"
+                "img/pirate_pedagogies/pages/zine-page-01.jpg",
+                "img/pirate_pedagogies/pages/zine-page-02.jpg",
+                "img/pirate_pedagogies/pages/zine-page-03.jpg",
+                "img/pirate_pedagogies/pages/zine-page-04.jpg",
+                "img/pirate_pedagogies/pages/zine-page-05.jpg",
+                "img/pirate_pedagogies/pages/zine-page-06.jpg",
+                "img/pirate_pedagogies/pages/zine-page-07.jpg"
             ],
             credentials: "Credits\nGraphic Design: Sena Çelebi\nEditor: Gülsen Namıduru"
         },
         {
             id: 5,
+            slug: "sylwester-stalker",
             title: "04 - Sylwester Stalker",
             year: "2025",
             category: "video",
@@ -88,6 +133,8 @@ const portfolioData = {
         },
         {
             id: 4,
+            slug: "book-of-textures",
+            hidden: true,
             title: '03a - Book of Textures',
             workItem: 'Book of Textures',
             sectionTitle:
@@ -103,6 +150,8 @@ const portfolioData = {
         },
         {
             id: 2,
+            slug: "abandoned-battleground",
+            mediaFit: "square",
             title: "02 - Abandoned Battleground",
             workItem: "Abandoned Battleground",
             sectionTitle:
@@ -126,6 +175,8 @@ const portfolioData = {
         },
         {
             id: 1,
+            slug: "architectures-of-sky",
+            hidden: true,
             title: "03 - Architectures Of Sky",
             workItem: "Architectures Of Sky",
             sectionTitle: 'Architectures of Sky, 2024 - ongoing\n\nSeries of photography. Dimensions variable.',
@@ -155,6 +206,7 @@ const portfolioData = {
         },
         {
             id: 3,
+            slug: "hieroglyphs",
             title: "01 - Hieroglyphs",
             workItem: "Hieroglyphs",
             sectionTitle: 'Hieroglyphs, 2022\n\nSeries of drawings, pen on paper, and acrylic on plywood.',
@@ -333,7 +385,80 @@ function initImageLightbox() {
 
 // Helper function to remove item numbers from title (e.g. "01 - Title" -> "Title")
 function removeTitleNumbers(title) {
-    return title.replace(/^\d+\s*-\s*/, '');
+    return title.replace(/^\d+[a-z]?\s*-\s*/i, '');
+}
+
+function projectSlugFromLabel(label) {
+    return String(label || '')
+        .trim()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+function getProjectSlug(project) {
+    if (!project) return '';
+    if (project.slug != null && String(project.slug).trim() !== '') {
+        return String(project.slug).trim();
+    }
+    if (project.workItem != null && String(project.workItem).trim() !== '') {
+        return projectSlugFromLabel(project.workItem);
+    }
+    return projectSlugFromLabel(removeTitleNumbers(project.title));
+}
+
+/** Project page URL (/slug/ on the site; slug/index.html when opening files locally). */
+function getProjectPageHref(project) {
+    const slug = getProjectSlug(project);
+    if (typeof window !== 'undefined' && window.location && window.location.protocol === 'file:') {
+        return slug + '/index.html';
+    }
+    return '/' + slug + '/';
+}
+
+function isProjectVisible(project) {
+    return !!(project && !project.hidden);
+}
+
+function visibleProjects() {
+    return portfolioData.projects.filter(isProjectVisible);
+}
+
+function findProjectBySlug(slug) {
+    const s = String(slug || '').trim().toLowerCase();
+    if (!s) return null;
+    const project =
+        portfolioData.projects.find(function (p) {
+            return getProjectSlug(p) === s;
+        }) || null;
+    return isProjectVisible(project) ? project : null;
+}
+
+function getProjectSlugFromPathname(pathname) {
+    const path = String(pathname || '').replace(/\/+$/, '');
+    const segments = path.split('/').filter(Boolean);
+    return segments.length ? segments[segments.length - 1].toLowerCase() : '';
+}
+
+function isProjectSubpage() {
+    const root = document.getElementById('project-sections');
+    return !!(root && root.dataset.pageMode === 'single');
+}
+
+/** Resolve img/pdf paths for homepage and /slug/ project pages */
+function siteAssetHref(relativePath) {
+    const p = String(relativePath || '').trim();
+    if (!p) return p;
+    if (/^(https?:|data:)/i.test(p)) return p;
+    if (p.startsWith('/')) return p;
+    const clean = p.replace(/^\.\//, '');
+    if (typeof window !== 'undefined' && window.location && window.location.protocol === 'file:') {
+        if (isProjectSubpage()) return '../' + clean;
+        return clean;
+    }
+    return '/' + clean;
 }
 
 /** Phrase as it appears at the start of fullDescription; defaults to work item title (sentence case) */
@@ -368,20 +493,46 @@ function boldWorkTitleInText(block, project) {
 // Initialize portfolio index
 function initializeIndex() {
     if (!portfolioIndex) return;
-    portfolioData.projects.forEach((project) => {
+    visibleProjects().forEach((project) => {
         const li = document.createElement('li');
-        li.textContent = project.workItem ? String(project.workItem) : removeTitleNumbers(project.title);
+        const row = document.createElement('div');
+        row.className = 'portfolio-index-row';
+        const link = document.createElement('a');
+        link.className = 'portfolio-index-link';
+        link.href = getProjectPageHref(project);
+        link.textContent = project.workItem ? String(project.workItem) : removeTitleNumbers(project.title);
         li.dataset.projectId = project.id;
         li.dataset.category = project.category.toLowerCase();
         li.dataset.medium = project.medium ? project.medium.toLowerCase() : '';
-        li.addEventListener('click', () => scrollToProjectSection(project.id));
+        row.appendChild(link);
+        const shortLine =
+            project.shortDescription != null ? String(project.shortDescription).trim() : '';
+        if (shortLine) {
+            const lead = document.createElement('p');
+            lead.className = 'portfolio-index-lead';
+            lead.textContent = shortLine;
+            row.appendChild(lead);
+        }
+        li.appendChild(row);
         portfolioIndex.appendChild(li);
     });
+}
+
+function ensureProjectSectionPopulated(article) {
+    if (!article || article.dataset.sectionPopulated === '1') return;
+    const pid = article.dataset.projectId;
+    const project = portfolioData.projects.find(function (p) {
+        return String(p.id) === pid;
+    });
+    if (!project) return;
+    article.dataset.sectionPopulated = '1';
+    populateProjectSection(article, project);
 }
 
 function scrollToProjectSection(projectId) {
     const el = document.getElementById('project-section-' + projectId);
     if (!el) return;
+    ensureProjectSectionPopulated(el);
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     el.classList.remove('project-section--flash');
     void el.offsetWidth;
@@ -394,31 +545,23 @@ function createProjectSectionElement(project) {
     article.id = 'project-section-' + project.id;
     article.dataset.projectId = String(project.id);
     article.innerHTML =
-        '<div class="project-section-inner">' +
-        '<header class="project-section-header">' +
-        '<div class="project-section-header-bar">' +
-        '<div class="project-section-header-left">' +
-        '<h2 class="project-section-title project-section-title--bar"></h2>' +
+        '<div class="project-section-inner project-wire">' +
+        '<div class="project-wire-media">' +
+        '<div class="project-wire-video" hidden></div>' +
+        '<div class="project-wire-diptych" hidden>' +
+        '<div class="project-wire-cell project-wire-cell--left">' +
+        '<img alt="" loading="lazy" decoding="async" />' +
         '</div>' +
-        '<div class="project-section-header-right">' +
-        '<div class="project-header-right-line1"></div>' +
-        '<div class="project-header-right-line2"></div>' +
-        '<div class="project-header-right-line3"></div>' +
-        '</div></div>' +
-        '</header>' +
-        '<div class="project-section-body">' +
-        '<div class="project-section-main-grid">' +
-        '<div class="project-section-text-col">' +
-        '<div class="project-gallery-title" aria-label="Gallery title"></div>' +
-        '<div class="popup-text project-full-description"></div>' +
-        '<div class="project-section-body-credits" aria-label="Credits"></div>' +
+        '<div class="project-wire-cell project-wire-cell--right">' +
+        '<img alt="" loading="lazy" decoding="async" />' +
         '</div>' +
-        '<div class="project-section-book-slot">' +
+        '</div>' +
+        '<div class="project-wire-book-slot" hidden>' +
         '<div class="book-view">' +
         '<div class="book-spread">' +
-        '<div class="book-page book-page-left"><img alt="" /></div>' +
+        '<div class="book-page book-page-left"><img alt="" loading="lazy" decoding="async" /></div>' +
         '<div class="book-spine"></div>' +
-        '<div class="book-page book-page-right"><img alt="" /></div>' +
+        '<div class="book-page book-page-right"><img alt="" loading="lazy" decoding="async" /></div>' +
         '</div>' +
         '<div class="book-controls" role="navigation" aria-label="Spread navigation">' +
         '<button type="button" class="slide-btn book-prev" aria-label="Previous spread">‹ Previous</button>' +
@@ -428,18 +571,57 @@ function createProjectSectionElement(project) {
         '<p class="book-loading">Loading…</p>' +
         '</div>' +
         '</div>' +
-        '<div class="project-section-gallery-row">' +
-        '<div class="project-wire-main-slot"></div>' +
-        '<div class="project-wire-figures-slot"></div>' +
+        '<div class="project-wire-media-controls" role="navigation" aria-label="Gallery navigation" hidden>' +
+        '<button type="button" class="slide-btn project-wire-media-prev" aria-label="Previous image">‹ Previous</button>' +
+        '<span class="slide-counter project-wire-media-counter" aria-live="polite"></span>' +
+        '<button type="button" class="slide-btn project-wire-media-next" aria-label="Next image">Next ›</button>' +
         '</div>' +
-        '<div class="project-section-video-slot">' +
-        '<div class="video-section"></div>' +
         '</div>' +
-        '<div class="project-section-media-placeholder" aria-hidden="true"></div>' +
+        '<div class="project-wire-footer">' +
+        '<div class="project-wire-meta" aria-label="Project details"></div>' +
+        '<div class="project-wire-desc-col project-wire-desc-col--2" aria-label="Description"></div>' +
+        '<div class="project-wire-desc-col project-wire-desc-col--3" aria-label="Description"></div>' +
+        '<div class="project-wire-desc-col project-wire-desc-col--4" aria-label="Description"></div>' +
+        '<div class="project-wire-desc-col project-wire-desc-col--5" aria-label="Description"></div>' +
+        '<div class="project-wire-credits project-section-body-credits" aria-label="Credits"></div>' +
         '</div>' +
-        '<div class="popup-credentials project-credentials"></div>' +
-        '</div></div>';
+        '</div>';
     return article;
+}
+
+/** spread: cover/last solo + interior pairs; page: one page per step (left slot). */
+function buildBookSpreadsFromPaths(imagePaths, layoutMode) {
+    const paths = (imagePaths || []).filter(function (p) {
+        return p && String(p).trim();
+    });
+    if (!paths.length) return [];
+    if (layoutMode === 'page') {
+        return paths.map(function (p) {
+            return [p, null];
+        });
+    }
+    const spreads = [[paths[0], null]];
+    let i = 1;
+    while (i < paths.length) {
+        const remaining = paths.length - i;
+        if (remaining === 1) {
+            spreads.push([paths[i], null]);
+            break;
+        }
+        spreads.push([paths[i], paths[i + 1]]);
+        i += 2;
+    }
+    return spreads;
+}
+
+function getBookOptionsFromProject(project) {
+    return {
+        layoutMode: project && project.bookLayoutMode === 'page' ? 'page' : 'spread',
+        omitLastPages:
+            project && project.bookOmitLastPages != null
+                ? Math.max(0, Number(project.bookOmitLastPages) || 0)
+                : 0
+    };
 }
 
 function createBookViewController(bookViewEl) {
@@ -451,19 +633,71 @@ function createBookViewController(bookViewEl) {
     const bookLoadingEl = bookViewEl.querySelector('.book-loading');
     const bookSpreadEl = bookViewEl.querySelector('.book-spread');
     const bookControlsEl = bookViewEl.querySelector('.book-controls');
+    const bookPageLeftEl = bookViewEl.querySelector('.book-page-left');
+    const bookPageRightEl = bookViewEl.querySelector('.book-page-right');
+    const bookSpineEl = bookViewEl.querySelector('.book-spine');
+    const inWireBookSlot = !!bookViewEl.closest('.project-wire-book-slot');
 
     let spreads = [];
     let currentSpreadIndex = 0;
     let loadToken = 0;
+    let layoutMode = 'spread';
+    let omitLastPages = 0;
 
     function showSpread(index) {
         currentSpreadIndex = index;
         const spread = spreads[index];
         if (!spread) return;
-        bookPageLeftImg.src = spread[0] || '';
-        bookPageLeftImg.style.display = spread[0] ? 'block' : 'none';
-        bookPageRightImg.src = spread[1] || '';
-        bookPageRightImg.style.display = spread[1] ? 'block' : 'none';
+        const hasLeft = !!(spread[0] && String(spread[0]).trim());
+        const hasRight = !!(spread[1] && String(spread[1]).trim());
+        if (inWireBookSlot) {
+            const pageLayout = layoutMode === 'page';
+            if (bookSpreadEl) {
+                bookSpreadEl.classList.toggle('book-spread--page-mode', pageLayout);
+            }
+            if (pageLayout) {
+                if (bookPageLeftEl) {
+                    bookPageLeftEl.removeAttribute('hidden');
+                    bookPageLeftEl.classList.remove('book-page--vacant');
+                    bookPageLeftEl.classList.add('book-page--page-full');
+                }
+                if (bookPageRightEl) {
+                    bookPageRightEl.setAttribute('hidden', 'hidden');
+                    bookPageRightEl.classList.remove('book-page--vacant', 'book-page--page-full');
+                }
+                if (bookSpineEl) bookSpineEl.hidden = true;
+            } else {
+                if (bookPageLeftEl) {
+                    bookPageLeftEl.removeAttribute('hidden');
+                    bookPageLeftEl.classList.remove('book-page--page-full');
+                    bookPageLeftEl.classList.toggle('book-page--vacant', !hasLeft);
+                }
+                if (bookPageRightEl) {
+                    bookPageRightEl.removeAttribute('hidden');
+                    bookPageRightEl.classList.remove('book-page--page-full');
+                    bookPageRightEl.classList.toggle('book-page--vacant', !hasRight);
+                }
+                if (bookSpineEl) bookSpineEl.hidden = !hasLeft || !hasRight;
+            }
+        } else {
+            if (bookPageLeftEl) bookPageLeftEl.hidden = !hasLeft;
+            if (bookPageRightEl) bookPageRightEl.hidden = !hasRight;
+            if (bookSpineEl) bookSpineEl.hidden = !hasLeft || !hasRight;
+        }
+        if (hasLeft) {
+            bookPageLeftImg.src = siteAssetHref(spread[0]);
+            bookPageLeftImg.style.display = 'block';
+        } else {
+            bookPageLeftImg.removeAttribute('src');
+            bookPageLeftImg.style.display = 'none';
+        }
+        if (hasRight) {
+            bookPageRightImg.src = siteAssetHref(spread[1]);
+            bookPageRightImg.style.display = 'block';
+        } else {
+            bookPageRightImg.removeAttribute('src');
+            bookPageRightImg.style.display = 'none';
+        }
         bookSpreadCounter.textContent = spreads.length > 0 ? (index + 1) + ' / ' + spreads.length : '';
         bookPrevBtn.disabled = index <= 0;
         bookNextBtn.disabled = index >= spreads.length - 1;
@@ -476,21 +710,85 @@ function createBookViewController(bookViewEl) {
         if (currentSpreadIndex < spreads.length - 1) showSpread(currentSpreadIndex + 1);
     });
 
+    function trimPagePaths(imagePaths) {
+        let paths = (imagePaths || []).filter(function (p) {
+            return p && String(p).trim();
+        });
+        if (omitLastPages > 0) {
+            paths = paths.slice(0, Math.max(0, paths.length - omitLastPages));
+        }
+        return paths;
+    }
+
+    function presentBookPaths(imagePaths) {
+        const paths = trimPagePaths(imagePaths);
+        if (!paths.length) {
+            bookLoadingEl.style.display = 'none';
+            bookSpreadEl.style.display = inWireBookSlot ? 'grid' : 'flex';
+            bookControlsEl.style.display = 'none';
+            if (inWireBookSlot) {
+                if (bookPageLeftEl) {
+                    bookPageLeftEl.removeAttribute('hidden');
+                    bookPageLeftEl.classList.add('book-page--vacant');
+                }
+                if (bookPageRightEl) {
+                    bookPageRightEl.removeAttribute('hidden');
+                    bookPageRightEl.classList.add('book-page--vacant');
+                }
+                if (bookSpineEl) bookSpineEl.hidden = true;
+            } else {
+                if (bookPageLeftEl) bookPageLeftEl.hidden = true;
+                if (bookPageRightEl) bookPageRightEl.hidden = true;
+                if (bookSpineEl) bookSpineEl.hidden = true;
+            }
+            bookPageLeftImg.removeAttribute('src');
+            bookPageRightImg.removeAttribute('src');
+            delete bookViewEl._lightboxUrls;
+            return;
+        }
+        spreads = buildBookSpreadsFromPaths(paths, layoutMode);
+        bookLoadingEl.style.display = 'none';
+        bookSpreadEl.style.display = inWireBookSlot ? 'grid' : 'flex';
+        bookControlsEl.style.display = paths.length > 1 ? 'flex' : 'none';
+        showSpread(0);
+        bookViewEl._lightboxUrls = paths.map(siteAssetHref);
+    }
+
     return {
+        setBookOptions: function (options) {
+            if (!options) return;
+            layoutMode = options.layoutMode === 'page' ? 'page' : 'spread';
+            omitLastPages = Math.max(0, Number(options.omitLastPages) || 0);
+        },
         showFromImages: function (imagePaths) {
             loadToken++;
             spreads = [];
             currentSpreadIndex = 0;
-            if (!imagePaths || imagePaths.length === 0) return;
-            spreads.push([null, imagePaths[0] || null]);
-            for (let i = 1; i < imagePaths.length; i += 2) {
-                spreads.push([imagePaths[i] || null, imagePaths[i + 1] || null]);
+            if (!imagePaths || imagePaths.length === 0) {
+                bookLoadingEl.style.display = 'none';
+                bookSpreadEl.style.display = inWireBookSlot ? 'grid' : 'flex';
+                bookControlsEl.style.display = 'none';
+                if (inWireBookSlot) {
+                    if (bookPageLeftEl) {
+                        bookPageLeftEl.removeAttribute('hidden');
+                        bookPageLeftEl.classList.add('book-page--vacant');
+                    }
+                    if (bookPageRightEl) {
+                        bookPageRightEl.removeAttribute('hidden');
+                        bookPageRightEl.classList.add('book-page--vacant');
+                    }
+                    if (bookSpineEl) bookSpineEl.hidden = true;
+                } else {
+                    if (bookPageLeftEl) bookPageLeftEl.hidden = true;
+                    if (bookPageRightEl) bookPageRightEl.hidden = true;
+                    if (bookSpineEl) bookSpineEl.hidden = true;
+                }
+                bookPageLeftImg.removeAttribute('src');
+                bookPageRightImg.removeAttribute('src');
+                delete bookViewEl._lightboxUrls;
+                return;
             }
-            bookLoadingEl.style.display = 'none';
-            bookSpreadEl.style.display = 'flex';
-            bookControlsEl.style.display = 'flex';
-            showSpread(0);
-            bookViewEl._lightboxUrls = imagePaths.slice();
+            presentBookPaths(imagePaths);
         },
         loadPdf: function (pdfUrl) {
             const myToken = ++loadToken;
@@ -501,7 +799,7 @@ function createBookViewController(bookViewEl) {
                 bookLoadingEl.style.display = 'block';
                 return;
             }
-            const absolutePdfUrl = new URL(pdfUrl, window.location.href).href;
+            const absolutePdfUrl = new URL(siteAssetHref(pdfUrl), window.location.href).href;
             bookLoadingEl.textContent = 'Loading PDF…';
             bookLoadingEl.style.display = 'block';
             bookSpreadEl.style.display = 'none';
@@ -533,24 +831,14 @@ function createBookViewController(bookViewEl) {
                 })
                 .then(function (imageUrls) {
                     if (!imageUrls || myToken !== loadToken) return;
-                    if (imageUrls.length > 0) {
-                        spreads.push([null, imageUrls[0] || null]);
-                        for (let i = 1; i < imageUrls.length; i += 2) {
-                            spreads.push([imageUrls[i] || null, imageUrls[i + 1] || null]);
-                        }
-                    }
-                    bookLoadingEl.style.display = 'none';
-                    bookSpreadEl.style.display = 'flex';
-                    bookControlsEl.style.display = 'flex';
-                    showSpread(0);
-                    bookViewEl._lightboxUrls = imageUrls.slice();
+                    presentBookPaths(imageUrls);
                 })
                 .catch(function () {
                     if (myToken !== loadToken) return;
                     bookLoadingEl.innerHTML =
                         'Could not load PDF. <a href="' +
                         absolutePdfUrl +
-                        '" target="_blank" rel="noopener" style="color:#000;text-decoration:underline;">Open in new tab</a>';
+                        '" target="_blank" rel="noopener" style="color:#ff0000;text-decoration:underline;">Open in new tab</a>';
                     bookLoadingEl.style.display = 'block';
                 });
         },
@@ -595,257 +883,305 @@ function fillProjectDescriptionLeadAndBody(fullDescEl, fullText, project) {
     fullDescEl.style.display = 'block';
 }
 
-function buildWireGallery(article, project, titleWithoutNumbers) {
-    const mainSlot = article.querySelector('.project-wire-main-slot');
-    const figuresSlot = article.querySelector('.project-wire-figures-slot');
-    if (!mainSlot || !figuresSlot) return;
+var EXPLANATION_DESC_COLUMN_COUNT = 4;
+var EXPLANATION_MIN_COLUMNS = 2;
 
-    mainSlot.innerHTML = '';
-    figuresSlot.innerHTML = '';
+function splitTextIntoWordChunks(text, numChunks) {
+    const words = String(text || '').trim().split(/\s+/).filter(Boolean);
+    if (!words.length) {
+        return Array.from({ length: numChunks }, function () {
+            return '';
+        });
+    }
+    const chunks = [];
+    const chunkCount = Math.max(1, numChunks);
+    let wordIndex = 0;
+    for (let c = 0; c < chunkCount; c++) {
+        const end =
+            c === chunkCount - 1
+                ? words.length
+                : Math.min(words.length, Math.round(((c + 1) * words.length) / chunkCount));
+        chunks.push(words.slice(wordIndex, end).join(' '));
+        wordIndex = end;
+    }
+    return chunks;
+}
 
-    const paths = project.images && project.images.length > 0 ? project.images : [];
-    if (paths.length === 0) {
-        mainSlot.style.display = 'none';
-        figuresSlot.style.display = 'none';
+function explanationColumnCount(totalLen, paragraphCount) {
+    const minCols = EXPLANATION_MIN_COLUMNS;
+    const maxCols = EXPLANATION_DESC_COLUMN_COUNT;
+    if (totalLen <= 0) return 0;
+    let cols = minCols;
+    if (totalLen >= 100 || paragraphCount >= 2) cols = 3;
+    if (totalLen >= 220 || paragraphCount >= 3) cols = 4;
+    return Math.min(maxCols, Math.max(minCols, cols));
+}
+
+function distributeExplanationParagraphs(paragraphs) {
+    const maxCols = EXPLANATION_DESC_COLUMN_COUNT;
+    const empty = Array.from({ length: maxCols }, function () {
+        return [];
+    });
+    if (!paragraphs.length) return empty;
+
+    const totalLen = paragraphs.reduce(function (sum, p) {
+        return sum + p.length;
+    }, 0);
+    const numCols = explanationColumnCount(totalLen, paragraphs.length);
+    const result = empty.slice();
+
+    if (paragraphs.length === 1) {
+        const chunks = splitTextIntoWordChunks(paragraphs[0], numCols);
+        chunks.forEach(function (chunk, i) {
+            if (chunk && chunk.trim()) result[i] = [chunk.trim()];
+        });
+        return result;
+    }
+
+    const target = totalLen / numCols;
+    let colIdx = 0;
+    let colLen = 0;
+    paragraphs.forEach(function (block) {
+        if (!result[colIdx]) result[colIdx] = [];
+        result[colIdx].push(block);
+        colLen += block.length;
+        if (colIdx < numCols - 1 && colLen >= target) {
+            colIdx++;
+            colLen = 0;
+        }
+    });
+
+    const filledCount = result.filter(function (g) {
+        return g && g.length > 0;
+    }).length;
+    if (filledCount < EXPLANATION_MIN_COLUMNS) {
+        const joined = paragraphs.join('\n\n');
+        const two = splitTextIntoWordChunks(joined, EXPLANATION_MIN_COLUMNS);
+        result.forEach(function (_, i) {
+            result[i] = [];
+        });
+        if (two[0] && two[0].trim()) result[0] = [two[0].trim()];
+        if (two[1] && two[1].trim()) result[1] = [two[1].trim()];
+    }
+
+    return result;
+}
+
+function fillProjectDescriptionWireColumns(article, fullText, project) {
+    const colEls = [
+        article.querySelector('.project-wire-desc-col--2'),
+        article.querySelector('.project-wire-desc-col--3'),
+        article.querySelector('.project-wire-desc-col--4'),
+        article.querySelector('.project-wire-desc-col--5')
+    ].filter(Boolean);
+    colEls.forEach(function (col) {
+        col.innerHTML = '';
+        col.style.display = '';
+    });
+    const full = (fullText || '').trim();
+    if (!full) {
+        colEls.forEach(function (col) {
+            col.style.display = 'none';
+        });
         return;
     }
-
-    mainSlot.style.display = '';
-    figuresSlot.style.display = paths.length > 1 ? '' : 'none';
-
-    const mainFrame = document.createElement('div');
-    mainFrame.className = 'project-wire-main-frame';
-    const mainImg = document.createElement('img');
-    mainImg.src = paths[0];
-    mainImg.alt = titleWithoutNumbers || '';
-    mainImg.className = 'project-wire-main-img';
-    mainFrame.appendChild(mainImg);
-    mainSlot.appendChild(mainFrame);
-
-    const captions =
-        project.imageCaptions && Array.isArray(project.imageCaptions) ? project.imageCaptions : [];
-
-    if (paths.length > 1) {
-        const inner = document.createElement('div');
-        inner.className = 'project-wire-figures-inner';
-
-        for (let i = 1; i < paths.length; ) {
-            const remaining = paths.length - i;
-            const countInRow = Math.min(4, remaining);
-            const row = document.createElement('div');
-            row.className = 'project-wire-figures-row';
-            if (countInRow === 1) row.classList.add('project-wire-figures-row--single');
-            else if (countInRow === 2) row.classList.add('project-wire-figures-row--pair');
-            else if (countInRow === 3) row.classList.add('project-wire-figures-row--triple');
-            else row.classList.add('project-wire-figures-row--quad');
-
-            for (let k = 0; k < countInRow; k++) {
-                const idx = i + k;
-                const fig = document.createElement('figure');
-                fig.className = 'project-wire-thumb';
-                const tframe = document.createElement('div');
-                tframe.className = 'project-wire-thumb-frame';
-                const img = document.createElement('img');
-                img.src = paths[idx];
-                img.alt = (titleWithoutNumbers || '') + ' — ' + idx;
-                const cap = document.createElement('figcaption');
-                const capIdx = idx - 1;
-                const custom = captions[capIdx];
-                cap.textContent =
-                    custom != null && String(custom).trim() !== ''
-                        ? String(custom).trim()
-                        : 'Figure ' + (capIdx + 1);
-                tframe.appendChild(img);
-                fig.appendChild(tframe);
-                fig.appendChild(cap);
-                row.appendChild(fig);
-            }
-            i += countInRow;
-            inner.appendChild(row);
-        }
-        figuresSlot.appendChild(inner);
-    }
-
-    function openAt(idx) {
-        openImageLightbox(paths, idx);
-    }
-    mainImg.addEventListener('click', function () {
-        openAt(0);
-    });
-    figuresSlot.querySelectorAll('img').forEach(function (im) {
-        im.addEventListener('click', function () {
-            const idx = paths.findIndex(function (p) {
-                try {
-                    return new URL(p, window.location.href).href === im.src;
-                } catch (_) {
-                    return p === im.src;
-                }
-            });
-            if (idx < 0) return;
-            mainImg.src = paths[idx];
-            openAt(idx);
+    const paragraphs = full.split(/\n\n+/).map(function (p) {
+        return p.trim();
+    }).filter(Boolean);
+    if (paragraphs.length === 0) {
+        colEls.forEach(function (col) {
+            col.style.display = 'none';
         });
+        return;
+    }
+    const groups = distributeExplanationParagraphs(paragraphs);
+    let lastUsed = -1;
+    colEls.forEach(function (col, i) {
+        const blocks = groups[i] || [];
+        if (!blocks.length) {
+            col.style.display = 'none';
+            return;
+        }
+        lastUsed = i;
+        blocks.forEach(function (block) {
+            const p = document.createElement('p');
+            p.className = 'project-body-paragraph';
+            p.innerHTML = boldWorkTitleInText(block, project);
+            col.appendChild(p);
+        });
+    });
+    colEls.forEach(function (col, i) {
+        if (i > lastUsed) col.style.display = 'none';
     });
 }
 
-function populateProjectSection(article, project) {
-    const titleWithoutNumbers = removeTitleNumbers(project.title);
+function fillProjectPageLead() {
+    const leadEl = document.getElementById('project-page-lead');
+    if (!leadEl) return;
+    leadEl.textContent = '';
+    leadEl.setAttribute('hidden', 'hidden');
+}
 
-    const titleBar = article.querySelector('.project-section-title--bar');
-    if (titleBar) {
-        const t = project.workItem ? String(project.workItem) : titleWithoutNumbers || project.title;
-        titleBar.textContent = t;
-    }
+/** Path to a pre-generated thumb (same folder + /thumbs/ + basename). Lightbox still uses fullPath. */
+function wireGalleryThumbSrc(fullPath) {
+    const s = String(fullPath);
+    const i = s.lastIndexOf('/');
+    if (i < 0) return s;
+    return s.slice(0, i) + '/thumbs/' + s.slice(i + 1);
+}
 
-    const galleryTitleEl = article.querySelector('.project-gallery-title');
-    if (galleryTitleEl) {
-        const gt = project.sectionTitle != null ? String(project.sectionTitle).trim() : '';
-        galleryTitleEl.textContent = gt;
-        galleryTitleEl.style.display = gt ? '' : 'none';
-    }
-
-    const r1 = article.querySelector('.project-header-right-line1');
-    const r2 = article.querySelector('.project-header-right-line2');
-    const r3 = article.querySelector('.project-header-right-line3');
-    // Hide "medium" from the UI: keep it as metadata only.
-    // We only show line1 when explicitly provided (e.g. special Voices layout).
-    if (r1) {
-        const explicit =
-            project.headerRight1 != null && String(project.headerRight1).trim() !== ''
-                ? String(project.headerRight1).trim()
-                : '';
-        r1.textContent = explicit;
-        r1.style.display = explicit ? '' : 'none';
-    }
-    if (r2) {
-        // Hide year line in all work descriptions (year remains metadata).
-        r2.textContent = '';
-        r2.style.display = 'none';
-    }
-    if (r3) {
-        const shortLine =
-            project.headerRight3 != null && String(project.headerRight3).trim() !== ''
-                ? String(project.headerRight3).trim()
-                : project.shortDescription || '';
-        r3.textContent = shortLine;
-        r3.style.display = shortLine ? '' : 'none';
-    }
-
-    const credentials = project.credentials || '';
-    const creditsInTextCol = article.querySelector('.project-section-body-credits');
-    if (creditsInTextCol) {
-        function renderCreditsBlock(heading, lines) {
-            const safeHeading = heading ? escapeHtml(String(heading)) : '';
-            const safeLines = (lines || [])
-                .map(function (l) {
-                    return String(l).trim();
-                })
-                .filter(Boolean)
-                .map(function (l) {
-                    // Special-case: link Sena Çelebi (Instagram) in credits.
-                    if (l.includes('Sena Çelebi')) {
-                        const url = 'https://www.instagram.com/scelebillus/';
-                        const parts = l.split('Sena Çelebi');
-                        if (parts.length >= 2) {
-                            return (
-                                '<div>' +
-                                escapeHtml(parts[0]) +
-                                '<a href="' +
-                                escapeHtml(url) +
-                                '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Sena Çelebi</a>' +
-                                escapeHtml(parts.slice(1).join('Sena Çelebi')) +
-                                '</div>'
-                            );
-                        }
-                    }
-                    // Special-case: link Fugue States (SoundCloud) in credits.
-                    if (l.includes('Fugue States')) {
-                        const url =
-                            'https://soundcloud.com/fugue-states?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3_a1dennglucmw24_tp1';
-                        const parts = l.split('Fugue States');
-                        if (parts.length >= 2) {
-                            return (
-                                '<div>' +
-                                escapeHtml(parts[0]) +
-                                '<a href="' +
-                                escapeHtml(url) +
-                                '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Fugue States</a>' +
-                                escapeHtml(parts.slice(1).join('Fugue States')) +
-                                '</div>'
-                            );
-                        }
-                    }
-                    return '<div>' + escapeHtml(l) + '</div>';
-                })
-                .join('');
-            return (
-                (safeHeading ? '<div><strong>' + safeHeading + '</strong></div>' : '') +
-                (safeLines ? '<div class="project-credits-lines">' + safeLines + '</div>' : '')
-            );
+function wireGalleryBindDisplayImage(imgEl, fullPath) {
+    const full = siteAssetHref(fullPath);
+    imgEl.dataset.fullSrc = full;
+    const thumb = siteAssetHref(wireGalleryThumbSrc(fullPath));
+    function onThumbError() {
+        imgEl.removeEventListener('error', onThumbError);
+        if (String(imgEl.src).indexOf('/thumbs/') !== -1) {
+            imgEl.src = full;
         }
+    }
+    imgEl.removeEventListener('error', onThumbError);
+    if (thumb !== full) {
+        imgEl.addEventListener('error', onThumbError, { once: true });
+        imgEl.src = thumb;
+    } else {
+        imgEl.src = full;
+    }
+}
 
-        const hasVoiceCredits = Array.isArray(project.credits) && project.credits.length > 0;
-        const raw = String(credentials || '').trim();
-
-        if (hasVoiceCredits) {
-            creditsInTextCol.innerHTML = renderCreditsBlock('Credits', project.credits);
-            creditsInTextCol.style.display = '';
-        } else if (raw) {
-            // If a credentials block starts with "Credits", bold only that heading.
-            const parts = raw.split(/\n+/);
-            const first = parts[0] ? parts[0].trim() : '';
-            const rest = parts.slice(1);
-            if (first.toLowerCase() === 'credits') {
-                creditsInTextCol.innerHTML = renderCreditsBlock('Credits', rest);
-            } else {
-                creditsInTextCol.textContent = raw;
+function renderCreditsBlock(heading, lines) {
+    const safeHeading = heading ? escapeHtml(String(heading)) : '';
+    const safeLines = (lines || [])
+        .map(function (l) {
+            return String(l).trim();
+        })
+        .filter(Boolean)
+        .map(function (l) {
+            if (l.includes('Sena Çelebi')) {
+                const url = 'https://www.instagram.com/scelebillus/';
+                const parts = l.split('Sena Çelebi');
+                if (parts.length >= 2) {
+                    return (
+                        '<div>' +
+                        escapeHtml(parts[0]) +
+                        '<a href="' +
+                        escapeHtml(url) +
+                        '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Sena Çelebi</a>' +
+                        escapeHtml(parts.slice(1).join('Sena Çelebi')) +
+                        '</div>'
+                    );
+                }
             }
-            creditsInTextCol.style.display = '';
+            if (l.includes('Fugue States')) {
+                const url =
+                    'https://soundcloud.com/fugue-states?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3_a1dennglucmw24_tp1';
+                const parts = l.split('Fugue States');
+                if (parts.length >= 2) {
+                    return (
+                        '<div>' +
+                        escapeHtml(parts[0]) +
+                        '<a href="' +
+                        escapeHtml(url) +
+                        '" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Fugue States</a>' +
+                        escapeHtml(parts.slice(1).join('Fugue States')) +
+                        '</div>'
+                    );
+                }
+            }
+            return '<div>' + escapeHtml(l) + '</div>';
+        })
+        .join('');
+    return (
+        (safeHeading ? '<div><strong>' + safeHeading + '</strong></div>' : '') +
+        (safeLines ? '<div class="project-credits-lines">' + safeLines + '</div>' : '')
+    );
+}
+
+function fillProjectCreditsElement(creditsEl, project) {
+    if (!creditsEl) return;
+    const credentials = project.credentials || '';
+    const hasVoiceCredits = Array.isArray(project.credits) && project.credits.length > 0;
+    const raw = String(credentials || '').trim();
+
+    if (hasVoiceCredits) {
+        creditsEl.innerHTML = renderCreditsBlock('Credits', project.credits);
+        creditsEl.style.display = '';
+    } else if (raw) {
+        const parts = raw.split(/\n+/);
+        const first = parts[0] ? parts[0].trim() : '';
+        const rest = parts.slice(1);
+        if (first.toLowerCase() === 'credits') {
+            creditsEl.innerHTML = renderCreditsBlock('Credits', rest);
         } else {
-            creditsInTextCol.textContent = '';
-            creditsInTextCol.style.display = 'none';
+            creditsEl.textContent = raw;
         }
+        creditsEl.style.display = '';
+    } else {
+        creditsEl.textContent = '';
+        creditsEl.style.display = 'none';
     }
+}
 
-    const mainGrid = article.querySelector('.project-section-main-grid');
-    const videoSlot = article.querySelector('.project-section-video-slot');
-    const videoSection = article.querySelector('.project-section-video-slot .video-section');
-    const fullDescEl = article.querySelector('.project-full-description');
-    const credEl = article.querySelector('.project-credentials');
+function projectUsesSquareMediaCells(project) {
+    if (project.mediaFit === 'square') return true;
+    if (project.id === 2) return true;
+    return false;
+}
+
+function projectUsesBookViewer(project) {
+    if (!project) return false;
+    const usePdf = project.pdf != null && String(project.pdf).trim() !== '';
+    const paths = project.pdfImages;
+    const list = Array.isArray(paths) ? paths : null;
+    if (usePdf) return true;
+    if (list && list.length > 0) return true;
+    if (project.bookLayout === true && list) return true;
+    return false;
+}
+
+function syncProjectWireMediaVisibility(article) {
+    const mediaEl = article.querySelector('.project-wire-media');
+    if (!mediaEl) return;
+    const hasSlot = mediaEl.querySelector(
+        '.project-wire-video:not([hidden]), .project-wire-diptych:not([hidden]), .project-wire-book-slot:not([hidden])'
+    );
+    mediaEl.hidden = !hasSlot;
+}
+
+function buildWireframeMedia(article, project, titleWithoutNumbers) {
+    const videoEl = article.querySelector('.project-wire-video');
+    const diptychEl = article.querySelector('.project-wire-diptych');
+    const bookSlot = article.querySelector('.project-wire-book-slot');
+    const controls = article.querySelector('.project-wire-media-controls');
+    const prevBtn = article.querySelector('.project-wire-media-prev');
+    const nextBtn = article.querySelector('.project-wire-media-next');
+    const counter = article.querySelector('.project-wire-media-counter');
+    const leftCell = article.querySelector('.project-wire-cell--left');
+    const rightCell = article.querySelector('.project-wire-cell--right');
+    const leftImg = article.querySelector('.project-wire-cell--left img');
+    const rightImg = article.querySelector('.project-wire-cell--right img');
     const bookViewEl = article.querySelector('.book-view');
-    const bookController = createBookViewController(bookViewEl);
-
-    fillProjectDescriptionLeadAndBody(fullDescEl, project.fullDescription || '', project);
-
-    if (credEl) {
-        credEl.textContent = '';
-        credEl.style.display = 'none';
+    const mediaEl = article.querySelector('.project-wire-media');
+    if (mediaEl) {
+        mediaEl.classList.remove('project-wire-media--book-only', 'project-wire-media--diptych');
     }
 
-    videoSection.innerHTML = '';
-    videoSection.style.display = 'none';
-
-    const usePdfImages =
-        project.pdfImages && Array.isArray(project.pdfImages) && project.pdfImages.length > 0;
-    const usePdf = project.pdf && project.pdf.trim() !== '';
-
-    bookViewEl.style.display = 'none';
-    bookViewEl.querySelector('.book-loading').style.display = 'none';
-    delete bookViewEl._lightboxUrls;
-
-    buildWireGallery(article, project, titleWithoutNumbers);
-
-    if (usePdfImages) {
-        bookViewEl.style.display = 'block';
-        bookController.showFromImages(project.pdfImages);
-    } else if (usePdf) {
-        bookController.showAndReset();
-        bookController.loadPdf(project.pdf);
+    if (videoEl) videoEl.hidden = true;
+    if (diptychEl) diptychEl.hidden = true;
+    if (bookSlot) bookSlot.hidden = true;
+    if (controls) controls.hidden = true;
+    if (leftCell) {
+        leftCell.hidden = false;
+        leftCell.classList.remove('project-wire-cell--solo');
+    }
+    if (rightCell) {
+        rightCell.hidden = false;
     }
 
     const vimeoRaw = project.vimeoId != null ? String(project.vimeoId).trim() : '';
-    if (vimeoRaw && /^\d+$/.test(vimeoRaw)) {
-        videoSection.style.display = 'block';
+    if (vimeoRaw && /^\d+$/.test(vimeoRaw) && videoEl) {
+        videoEl.hidden = false;
+        videoEl.innerHTML = '';
         const videoWrapper = document.createElement('div');
         videoWrapper.className = 'video-wrapper';
         const iframe = document.createElement('iframe');
@@ -853,61 +1189,219 @@ function populateProjectSection(article, project) {
         iframe.setAttribute('frameborder', '0');
         iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
         iframe.setAttribute('allowfullscreen', 'true');
-        iframe.style.display = 'block';
-        iframe.style.width = '100%';
-        iframe.style.aspectRatio = '16 / 9';
-        iframe.style.height = 'auto';
-        iframe.style.minHeight = '200px';
+        iframe.title = titleWithoutNumbers || 'Video';
         videoWrapper.appendChild(iframe);
-        videoSection.appendChild(videoWrapper);
-    } else if (project.videoPlaceholder) {
-        videoSection.style.display = 'block';
+        videoEl.appendChild(videoWrapper);
+        syncProjectWireMediaVisibility(article);
+        return;
+    }
+
+    if (project.videoPlaceholder && videoEl) {
+        videoEl.hidden = false;
+        videoEl.innerHTML = '';
         const placeholder = document.createElement('div');
         placeholder.className = 'project-video-placeholder';
         placeholder.setAttribute('aria-label', 'Video embed');
-        videoSection.appendChild(placeholder);
+        videoEl.appendChild(placeholder);
+        syncProjectWireMediaVisibility(article);
+        return;
     }
 
-    const hasGallery = project.images && project.images.length > 0;
-    const hasVideo = videoSection.style.display === 'block';
-    const hasBook = bookViewEl.style.display === 'block';
-    const bookSlot = article.querySelector('.project-section-book-slot');
-    const galleryRow = article.querySelector('.project-section-gallery-row');
+    const useBook = projectUsesBookViewer(project);
 
-    if (bookSlot) {
-        bookSlot.classList.toggle('has-book', hasBook);
-    }
-    if (galleryRow) {
-        galleryRow.classList.toggle('has-gallery', hasGallery);
+    if (useBook && bookSlot && bookViewEl) {
+        bookSlot.hidden = false;
+        if (mediaEl) mediaEl.classList.add('project-wire-media--book-only');
+        if (controls) controls.hidden = true;
+        syncProjectWireMediaVisibility(article);
+        return;
     }
 
-    const mediaPh = article.querySelector('.project-section-media-placeholder');
-    if (mediaPh) {
-        const showPlaceholder = !hasGallery && !hasVideo && !hasBook;
-        mediaPh.classList.toggle('is-visible', showPlaceholder);
+    const paths = project.images && project.images.length > 0 ? project.images : [];
+    if (!diptychEl || paths.length === 0 || !leftImg || !rightImg) {
+        syncProjectWireMediaVisibility(article);
+        return;
     }
 
-    if (mainGrid) {
-        mainGrid.classList.remove('project-section-main-grid--gallery-book', 'project-section-main-grid--has-gallery-row');
-        if (videoSlot) {
-            videoSlot.classList.toggle('has-video', hasVideo);
+    diptychEl.hidden = false;
+    if (mediaEl) mediaEl.classList.add('project-wire-media--diptych');
+    const alt = titleWithoutNumbers || '';
+    const spreadCount = Math.max(1, Math.ceil(paths.length / 2));
+    let spreadIndex = 0;
+    let leftImageIndex = 0;
+    let rightImageIndex = -1;
+
+    function showDiptychSpread(nextSpread) {
+        spreadIndex = ((nextSpread % spreadCount) + spreadCount) % spreadCount;
+        leftImageIndex = spreadIndex * 2;
+        rightImageIndex = leftImageIndex + 1 < paths.length ? leftImageIndex + 1 : -1;
+
+        wireGalleryBindDisplayImage(leftImg, paths[leftImageIndex]);
+        leftImg.alt = alt;
+        if (rightImageIndex >= 0 && rightCell) {
+            wireGalleryBindDisplayImage(rightImg, paths[rightImageIndex]);
+            rightImg.alt = alt;
+            rightCell.hidden = false;
+            if (leftCell) leftCell.classList.remove('project-wire-cell--solo');
+        } else {
+            if (rightImg) rightImg.removeAttribute('src');
+            if (rightCell) rightCell.hidden = true;
+            if (leftCell) leftCell.classList.add('project-wire-cell--solo');
         }
-
-        mainGrid.classList.toggle('project-section-main-grid--has-gallery-row', hasGallery);
-        if (hasGallery && hasBook) {
-            mainGrid.classList.add('project-section-main-grid--gallery-book');
+        if (counter) {
+            if (rightImageIndex >= 0) {
+                counter.textContent =
+                    leftImageIndex + 1 + '–' + (rightImageIndex + 1) + ' / ' + paths.length;
+            } else {
+                counter.textContent = leftImageIndex + 1 + ' / ' + paths.length;
+            }
         }
+        const singleSpread = spreadCount <= 1;
+        if (controls) controls.hidden = singleSpread;
+        if (prevBtn) prevBtn.disabled = singleSpread;
+        if (nextBtn) nextBtn.disabled = singleSpread;
     }
+
+    showDiptychSpread(0);
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+            showDiptychSpread(spreadIndex - 1);
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+            showDiptychSpread(spreadIndex + 1);
+        });
+    }
+
+    leftImg.addEventListener('click', function () {
+        openImageLightbox(paths.map(siteAssetHref), leftImageIndex);
+    });
+    rightImg.addEventListener('click', function () {
+        if (rightImageIndex >= 0) openImageLightbox(paths.map(siteAssetHref), rightImageIndex);
+    });
+
+    syncProjectWireMediaVisibility(article);
+}
+
+function populateProjectSection(article, project) {
+    const titleWithoutNumbers = removeTitleNumbers(project.title);
+    const wireRoot = article.querySelector('.project-wire');
+
+    if (wireRoot) {
+        wireRoot.classList.toggle('project-wire--square-cells', projectUsesSquareMediaCells(project));
+        wireRoot.classList.toggle('project-wire--vertical-cells', !projectUsesSquareMediaCells(project));
+    }
+
+    const metaEl = article.querySelector('.project-wire-meta');
+    if (metaEl) {
+        const gt = project.sectionTitle != null ? String(project.sectionTitle).trim() : '';
+        metaEl.textContent = gt;
+        metaEl.style.display = gt ? '' : 'none';
+    }
+
+    fillProjectDescriptionWireColumns(article, project.fullDescription || '', project);
+
+    fillProjectCreditsElement(article.querySelector('.project-wire-footer .project-wire-credits'), project);
+
+    const bookViewEl = article.querySelector('.book-view');
+    const bookController = createBookViewController(bookViewEl);
+
+    if (bookViewEl) {
+        bookViewEl.style.display = 'none';
+        const loading = bookViewEl.querySelector('.book-loading');
+        if (loading) loading.style.display = 'none';
+        delete bookViewEl._lightboxUrls;
+    }
+
+    buildWireframeMedia(article, project, titleWithoutNumbers);
+
+    const useBook = projectUsesBookViewer(project);
+    const pdfPaths = Array.isArray(project.pdfImages) ? project.pdfImages : [];
+    const usePdf = project.pdf != null && String(project.pdf).trim() !== '';
+
+    const wireMediaControls = article.querySelector('.project-wire-media-controls');
+    if (useBook && bookViewEl) {
+        bookViewEl.style.display = 'block';
+        if (bookController.setBookOptions) {
+            bookController.setBookOptions(getBookOptionsFromProject(project));
+        }
+        if (usePdf) {
+            bookController.showAndReset();
+            bookController.loadPdf(project.pdf);
+        } else {
+            bookController.showFromImages(pdfPaths);
+        }
+        if (wireMediaControls) wireMediaControls.hidden = true;
+    }
+
+    syncProjectWireMediaVisibility(article);
 }
 
 function initializeProjectSections() {
     if (!projectSectionsEl) return;
     projectSectionsEl.innerHTML = '';
-    portfolioData.projects.forEach(function (project) {
+    visibleProjects().forEach(function (project) {
         const article = createProjectSectionElement(project);
-        populateProjectSection(article, project);
+        article.dataset.sectionPopulated = '0';
         projectSectionsEl.appendChild(article);
     });
+    const articles = projectSectionsEl.querySelectorAll('article.project-section');
+    if (articles[0]) {
+        ensureProjectSectionPopulated(articles[0]);
+    }
+    if (typeof IntersectionObserver !== 'undefined') {
+        const io = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    io.unobserve(entry.target);
+                    ensureProjectSectionPopulated(entry.target);
+                });
+            },
+            { root: null, rootMargin: '320px 0px', threshold: 0 }
+        );
+        articles.forEach(function (article) {
+            if (article.dataset.sectionPopulated === '1') return;
+            io.observe(article);
+        });
+    } else {
+        articles.forEach(ensureProjectSectionPopulated);
+    }
+}
+
+function initializeSingleProjectPage() {
+    const root = document.getElementById('project-sections');
+    if (!root || root.dataset.pageMode !== 'single') return;
+
+    const slug =
+        root.dataset.projectSlug && String(root.dataset.projectSlug).trim()
+            ? String(root.dataset.projectSlug).trim()
+            : getProjectSlugFromPathname(window.location.pathname);
+    const project = findProjectBySlug(slug);
+
+    root.innerHTML = '';
+    if (!project) {
+        root.innerHTML =
+            '<div class="project-page-not-found">' +
+            '<p>Project not found.</p>' +
+            '<p><a href="' +
+            (window.location.protocol === 'file:' ? '../index.html' : '/') +
+            '">Back to home</a></p>' +
+            '</div>';
+        document.title = 'Not found — Gülsen Namıduru';
+        return;
+    }
+
+    const label = project.workItem ? String(project.workItem) : removeTitleNumbers(project.title);
+    document.title = label + ' — Gülsen Namıduru';
+
+    fillProjectPageLead();
+
+    const article = createProjectSectionElement(project);
+    root.appendChild(article);
+    ensureProjectSectionPopulated(article);
 }
 
 if (typeof pdfjsLib !== 'undefined') {
@@ -979,10 +1473,10 @@ function openContactView() {
     if (!contactView || !contactContent) return;
     contactContent.innerHTML = `
         <p><strong>Instagram:</strong><br>
-        <a href="https://www.instagram.com/gnamiduru/?hl=en" target="_blank" style="color: black; text-decoration: underline;">@gnamiduru</a></p>
+        <a href="https://www.instagram.com/gnamiduru/?hl=en" target="_blank" style="color: #ff0000; text-decoration: underline;">@gnamiduru</a></p>
         
         <p><strong>Email:</strong><br>
-        <a href="mailto:namidurugg@gmail.com" style="color: black; text-decoration: underline;">namidurugg@gmail.com</a></p>
+        <a href="mailto:namidurugg@gmail.com" style="color: #ff0000; text-decoration: underline;">namidurugg@gmail.com</a></p>
     `;
     contactView.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -1040,7 +1534,7 @@ function openCvPageView() {
         <p>Hieroglyphs, at Parus Art Space, Ankara</p>
         
         <h3><strong>Mentions</strong></h3>
-        <p><a href="https://figuresphotography.com/stories/abandoned-battleground-abandoned-battleground-gulsen-namiduru/" target="_blank" style="color: black; text-decoration: underline;">Abandoned Battleground by Gülsen Namıduru</a>, at Figures Photography</p>
+        <p><a href="https://figuresphotography.com/stories/abandoned-battleground-abandoned-battleground-gulsen-namiduru/" target="_blank" style="color: #ff0000; text-decoration: underline;">Abandoned Battleground by Gülsen Namıduru</a>, at Figures Photography</p>
     `;
     cvPageView.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -1086,10 +1580,11 @@ function openPhotographyView() {
         content = '<p>No photography projects available.</p>';
     } else {
         photographyProjects.forEach((project) => {
-            content += `<div style="margin-bottom: 30px; cursor: pointer;" onclick="openPopupFromCategory(${project.id})">
-                <h3 style="font-size: 24px; margin-bottom: 10px;">${project.title} (${project.year})</h3>
-                <p style="font-size: 20px; margin-bottom: 10px;">${project.shortDescription}</p>
-            </div>`;
+            const href = escapeHtml(getProjectPageHref(project));
+            content += `<div style="margin-bottom: 30px;"><a href="${href}" style="color:inherit;text-decoration:none;display:block;">
+                <h3 style="font-size: 24px; margin-bottom: 10px;">${escapeHtml(project.title)} (${escapeHtml(project.year)})</h3>
+                <p style="font-size: 20px; margin-bottom: 10px;">${escapeHtml(project.shortDescription)}</p>
+            </a></div>`;
         });
     }
     
@@ -1125,7 +1620,7 @@ if (photographyLink && portfolioIndex) {
         const medium = li.dataset.medium;
         if (medium === 'photography') {
             if (photographyHighlighted) {
-                li.style.color = '#000000';
+                li.style.color = '#ff0000';
             } else {
                 li.style.color = ''; // Reset to default
             }
@@ -1168,10 +1663,11 @@ function openVideoView() {
         content = '<p>No video projects available.</p>';
     } else {
         videoProjects.forEach((project) => {
-            content += `<div style="margin-bottom: 30px; cursor: pointer;" onclick="openPopupFromCategory(${project.id})">
-                <h3 style="font-size: 24px; margin-bottom: 10px;">${project.title} (${project.year})</h3>
-                <p style="font-size: 20px; margin-bottom: 10px;">${project.shortDescription}</p>
-            </div>`;
+            const href = escapeHtml(getProjectPageHref(project));
+            content += `<div style="margin-bottom: 30px;"><a href="${href}" style="color:inherit;text-decoration:none;display:block;">
+                <h3 style="font-size: 24px; margin-bottom: 10px;">${escapeHtml(project.title)} (${escapeHtml(project.year)})</h3>
+                <p style="font-size: 20px; margin-bottom: 10px;">${escapeHtml(project.shortDescription)}</p>
+            </a></div>`;
         });
     }
     
@@ -1202,7 +1698,7 @@ if (videoLink && portfolioIndex) {
         const medium = li.dataset.medium;
         if (medium === 'video') {
             if (videoHighlighted) {
-                li.style.color = '#000000';
+                li.style.color = '#ff0000';
             } else {
                 li.style.color = ''; // Reset to default
             }
@@ -1247,10 +1743,11 @@ function openSculptureView() {
         content = '<p>No art in public space projects available.</p>';
     } else {
         sculptureProjects.forEach((project) => {
-            content += `<div style="margin-bottom: 30px; cursor: pointer;" onclick="openPopupFromCategory(${project.id})">
-                <h3 style="font-size: 24px; margin-bottom: 10px;">${project.title} (${project.year})</h3>
-                <p style="font-size: 20px; margin-bottom: 10px;">${project.shortDescription}</p>
-            </div>`;
+            const href = escapeHtml(getProjectPageHref(project));
+            content += `<div style="margin-bottom: 30px;"><a href="${href}" style="color:inherit;text-decoration:none;display:block;">
+                <h3 style="font-size: 24px; margin-bottom: 10px;">${escapeHtml(project.title)} (${escapeHtml(project.year)})</h3>
+                <p style="font-size: 20px; margin-bottom: 10px;">${escapeHtml(project.shortDescription)}</p>
+            </a></div>`;
         });
     }
     
@@ -1281,7 +1778,7 @@ if (sculptureLink && portfolioIndex) {
         const medium = li.dataset.medium;
         if (medium === 'installation' || medium === 'art in public space') {
             if (sculptureHighlighted) {
-                li.style.color = '#000000';
+                li.style.color = '#ff0000';
             } else {
                 li.style.color = ''; // Reset to default
             }
@@ -1316,14 +1813,7 @@ if (sculptureView) {
 function openPopupFromCategory(projectId) {
     const project = portfolioData.projects.find(p => p.id === projectId);
     if (project) {
-        if (photographyView && photographyView.classList.contains('active')) {
-            closePhotographyView();
-        } else if (videoView && videoView.classList.contains('active')) {
-            closeVideoView();
-        } else if (sculptureView && sculptureView.classList.contains('active')) {
-            closeSculptureView();
-        }
-        scrollToProjectSection(project.id);
+        window.location.href = getProjectPageHref(project);
     }
 }
 
@@ -1341,6 +1831,19 @@ function isPageReload() {
     return false;
 }
 
+function redirectLegacyProjectHash() {
+    if (!document.getElementById('works-landing')) return;
+    const hash = window.location.hash || '';
+    const match = hash.match(/^#project-section-(\d+)$/);
+    if (!match) return;
+    const project = portfolioData.projects.find(function (p) {
+        return String(p.id) === match[1];
+    });
+    if (project) {
+        window.location.replace(getProjectPageHref(project));
+    }
+}
+
 function resetToLandingOnReload() {
     if (!isPageReload() || !document.getElementById('works-landing')) return;
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
@@ -1355,9 +1858,13 @@ function resetToLandingOnReload() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
+    redirectLegacyProjectHash();
     resetToLandingOnReload();
-    initializeIndex();
-    initializeProjectSections();
+    initializeSingleProjectPage();
+    if (portfolioIndex) initializeIndex();
+    if (projectSectionsEl && projectSectionsEl.dataset.pageMode !== 'single') {
+        initializeProjectSections();
+    }
     initImageLightbox();
 });
 
